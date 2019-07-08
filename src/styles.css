@@ -1,0 +1,198 @@
+body {
+  background-image: url("https://wallpaperplay.com/walls/full/c/e/7/12881.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+#home {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 4px;
+  color: #0166FE;
+  text-shadow: 1px 2px 2px black, 0 0 5px #0166FE;
+}
+
+#gameSelector {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 4px;
+  color: #0166FE;
+}
+
+#envoy {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 4px;
+  color: #0166FE;
+}
+
+#colonize {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 4px;
+  color: #0166FE;
+}
+
+#resultScreen {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 4px;
+  color: #0166FE;
+}
+
+.btn:hover {
+  background-color: #008CBA;
+}
+
+.btn:active {
+  background-color: #008CBA;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+#start {
+  background-color: white;
+  border: none;
+  color: black;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+  box-shadow: 0 0 5px #0166FE;
+  text-shadow: 0 0 5px #0166FE;
+}
+#start {
+  background-color: black;
+  color: #0166FE;
+  border: 2px solid #0166FE;
+  border-radius: 12px;
+}
+#start:hover {
+  background-color: white;
+  color: black;
+}
+
+#game1 {
+  background-color: white;
+  border: none;
+  color: black;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+  box-shadow: 0 0 5px #0166FE;
+  text-shadow: 0 0 5px #0166FE;
+}
+#game1 {
+  background-color: black;
+  color: #0166FE;
+  border: 2px solid #0166FE;
+  border-radius: 12px;
+}
+#game1:hover {
+  background-color: white;
+  color: black;
+}
+
+
+#game2 {
+  background-color: white;
+  border: none;
+  color: black;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+  box-shadow: 0 0 5px #0166FE;
+  text-shadow: 0 0 5px #0166FE;
+}
+#game2 {
+  background-color: black;
+  color: #0166FE;
+  border: 2px solid #0166FE;
+  border-radius: 12px;
+}
+#game2:hover {
+  background-color: white;
+  color: black;
+}
+
+
+#goBack1 {
+  background-color: white;
+  border: none;
+  color: black;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+  box-shadow: 0 0 5px #0166FE;
+  text-shadow: 0 0 5px #0166FE;
+}
+#goBack1 {
+  background-color: black;
+  color: #0166FE;
+  border: 2px solid #0166FE;
+  border-radius: 12px;
+}
+#goBack1:hover {
+  background-color: white;
+  color: black;
+}
+#goBack2 {
+  background-color: white;
+  border: none;
+  color: black;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+#goBack2 {
+  background-color: black;
+  color: #0166FE;
+  border: 2px solid #0166FE;
+  border-radius: 12px;
+}
+#goBack2:hover {
+  background-color: white;
+  color: black;
+}
+
+.footer {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 4px;
+  color: #0166FE;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  }
