@@ -1,5 +1,5 @@
 body {
-  background-image: url("https://wallpaperplay.com/walls/full/c/e/7/12881.jpg");
+  background-image: url("https://wallpaperfm.com/img/original/8/5/7/9236.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -7,31 +7,65 @@ body {
 
 #home {
   text-align: center;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 9, 0.8);
   border-radius: 4px;
-  color: #0166FE;
-  text-shadow: 1px 2px 2px black, 0 0 5px #0166FE;
+  color: #00ECFF;
+  text-shadow: 1px 2px 2px #00A6FF, 0 0 5px #2256F4;
+  font-family: 'Orbitron', sans-serif;
 }
 
 #gameSelector {
   text-align: center;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 9, 0.8);
   border-radius: 4px;
-  color: #0166FE;
+  color: #00ECFF;
+  font-family: 'Orbitron', sans-serif;
 }
 
 #envoy {
   text-align: center;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 9, 0.8);
   border-radius: 4px;
-  color: #0166FE;
+  color: #00ECFF;
+  font-family: 'Orbitron', sans-serif;
+}
+
+#gameUi {
+  background-color:transparent;
+  border-radius: 4px;
+  font-family: 'Orbitron', sans-serif;
+}
+
+#shipType {
+  background: black;
+  color: #00ECFF;
+  font-family: 'Orbitron', sans-serif;
+}
+
+#gameWindow {
+  background-color:transparent;
+  color: #00ECFF;
+  font-family: 'Orbitron', sans-serif;
+}
+
+#statCard {
+  background: black;
+  color: #00ECFF;
+  font-family: 'Orbitron', sans-serif;
+}
+
+#actionBar {
+  background-color:transparent;
+  color: #00ECFF;
+  font-family: 'Orbitron', sans-serif;
 }
 
 #colonize {
   text-align: center;
   background: rgba(0, 0, 0, 0.7);
   border-radius: 4px;
-  color: #0166FE;
+  color: #2256F4;
+  font-family: 'Orbitron', sans-serif;
 }
 
 #resultScreen {
@@ -39,6 +73,7 @@ body {
   background: rgba(0, 0, 0, 0.7);
   border-radius: 4px;
   color: #0166FE;
+  font-family: 'Orbitron', sans-serif;
 }
 
 .btn:hover {
@@ -52,9 +87,9 @@ body {
 }
 
 #start {
-  background-color: white;
+  background-color: #00ECFF;
   border: none;
-  color: black;
+  color: #2256F4;
   padding: 16px 32px;
   text-align: center;
   text-decoration: none;
@@ -64,24 +99,26 @@ body {
   -webkit-transition-duration: 0.4s; /* Safari */
   transition-duration: 0.4s;
   cursor: pointer;
-  box-shadow: 0 0 5px #0166FE;
-  text-shadow: 0 0 5px #0166FE;
+  box-shadow: 0 0 5px #00ECFF, 0 0 5px #2256F4;
+  text-shadow: 0 0 5px #00ECFF, 0 0 5px #2256F4;
 }
+
+
 #start {
-  background-color: black;
-  color: #0166FE;
-  border: 2px solid #0166FE;
+  background-color: #2256F4;
+  color: #00ECFF;
+  border: 2px solid #00ECFF, 0 0 5px #2256F4;;
   border-radius: 12px;
 }
 #start:hover {
-  background-color: white;
-  color: black;
+  background-color: #00ECFF;
+  color: #2256F4;
 }
 
 #game1 {
-  background-color: white;
+  background-color: #00ECFF;
   border: none;
-  color: black;
+  color: #2256F4;
   padding: 16px 32px;
   text-align: center;
   text-decoration: none;
@@ -91,25 +128,27 @@ body {
   -webkit-transition-duration: 0.4s; /* Safari */
   transition-duration: 0.4s;
   cursor: pointer;
-  box-shadow: 0 0 5px #0166FE;
-  text-shadow: 0 0 5px #0166FE;
+  box-shadow: 0 0 5px #00ECFF, 0 0 5px #2256F4;
+  text-shadow: 0 0 5px #00ECFF, 0 0 5px #2256F4;
 }
+
+
 #game1 {
-  background-color: black;
-  color: #0166FE;
-  border: 2px solid #0166FE;
+  background-color: #2256F4;
+  color: #00ECFF;
+  border: 2px solid #00ECFF, 0 0 5px #2256F4;;
   border-radius: 12px;
 }
 #game1:hover {
-  background-color: white;
-  color: black;
+  background-color: #00ECFF;
+  color: #2256F4;
 }
 
 
 #game2 {
-  background-color: white;
+  background-color: #00ECFF;
   border: none;
-  color: black;
+  color: #2256F4;
   padding: 16px 32px;
   text-align: center;
   text-decoration: none;
@@ -119,25 +158,27 @@ body {
   -webkit-transition-duration: 0.4s; /* Safari */
   transition-duration: 0.4s;
   cursor: pointer;
-  box-shadow: 0 0 5px #0166FE;
-  text-shadow: 0 0 5px #0166FE;
+  box-shadow: 0 0 5px #00ECFF, 0 0 5px #2256F4;
+  text-shadow: 0 0 5px #00ECFF, 0 0 5px #2256F4;
 }
+
+
 #game2 {
-  background-color: black;
-  color: #0166FE;
-  border: 2px solid #0166FE;
+  background-color: #2256F4;
+  color: #00ECFF;
+  border: 2px solid #00ECFF, 0 0 5px #2256F4;;
   border-radius: 12px;
 }
 #game2:hover {
-  background-color: white;
-  color: black;
+  background-color: #00ECFF;
+  color: #2256F4;
 }
 
 
 #goBack1 {
-  background-color: white;
+  background-color: #00ECFF;
   border: none;
-  color: black;
+  color: #2256F4;
   padding: 16px 32px;
   text-align: center;
   text-decoration: none;
@@ -147,23 +188,24 @@ body {
   -webkit-transition-duration: 0.4s; /* Safari */
   transition-duration: 0.4s;
   cursor: pointer;
-  box-shadow: 0 0 5px #0166FE;
-  text-shadow: 0 0 5px #0166FE;
+  box-shadow: 0 0 5px #00ECFF, 0 0 5px #2256F4;
+  text-shadow: 0 0 5px #00ECFF, 0 0 5px #2256F4;
 }
 #goBack1 {
-  background-color: black;
-  color: #0166FE;
-  border: 2px solid #0166FE;
+  background-color: #2256F4;
+  color: #00ECFF;
+  border: 2px solid #00ECFF, 0 0 5px #2256F4;;
   border-radius: 12px;
 }
 #goBack1:hover {
-  background-color: white;
-  color: black;
+  background-color: #00ECFF;
+  color: #2256F4;
 }
+
 #goBack2 {
-  background-color: white;
+  background-color: #00ECFF;
   border: none;
-  color: black;
+  color: #2256F4;
   padding: 16px 32px;
   text-align: center;
   text-decoration: none;
@@ -173,24 +215,26 @@ body {
   -webkit-transition-duration: 0.4s; /* Safari */
   transition-duration: 0.4s;
   cursor: pointer;
+  box-shadow: 0 0 5px #00ECFF, 0 0 5px #2256F4;
+  text-shadow: 0 0 5px #00ECFF, 0 0 5px #2256F4;
 }
 
 #goBack2 {
-  background-color: black;
-  color: #0166FE;
-  border: 2px solid #0166FE;
+  background-color: #2256F4;
+  color: #00ECFF;
+  border: 2px solid #00ECFF, 0 0 5px #2256F4;;
   border-radius: 12px;
 }
 #goBack2:hover {
-  background-color: white;
-  color: black;
+  background-color: #00ECFF;
+  color: #2256F4;
 }
 
 .footer {
   text-align: center;
   background: rgba(0, 0, 0, 0.7);
   border-radius: 4px;
-  color: #0166FE;
+  color: #00ECFF;
   position: fixed;
   left: 0;
   bottom: 0;
