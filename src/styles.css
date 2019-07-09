@@ -240,3 +240,95 @@ body {
   bottom: 0;
   width: 100%;
   }
+  #crew1{
+    background-color:transparent;
+    color: #00ECFF;
+    font-family: 'Orbitron', sans-serif;
+  }
+  #crew2{
+    background-color:transparent;
+    color: #00ECFF;
+    font-family: 'Orbitron', sans-serif;
+  }
+  #crew3{
+    background-color:transparent;
+    color: #00ECFF;
+    font-family: 'Orbitron', sans-serif;
+  }
+  #crew4{
+    background-color:transparent;
+    color: #00ECFF;
+    font-family: 'Orbitron', sans-serif;
+  }
+  #crew5{
+    background-color:transparent;
+    color: #00ECFF;
+    font-family: 'Orbitron', sans-serif;
+  }
+  #crew6{
+    background-color:transparent;
+    color: #00ECFF;
+    font-family: 'Orbitron', sans-serif;
+  }
+  #crew7{
+    background-color:transparent;
+    color: #00ECFF;
+    font-family: 'Orbitron', sans-serif;
+  }
+  #crew8{
+    background-color:transparent;
+    color: #00ECFF;
+    font-family: 'Orbitron', sans-serif;
+  }
+  #crew9{
+    background-color:transparent;
+    color: #00ECFF;
+    font-family: 'Orbitron', sans-serif;
+  }
+  #crew10{
+    background-color:transparent;
+    color: #00ECFF;
+    font-family: 'Orbitron', sans-serif;
+  }
+
+  /* #health {
+    color: #de0000;
+
+  } */
+  progress {
+  	display:inline-block;
+  	width:190px;
+  	height:20px;
+  	margin:0;
+  	background:none;
+  	border: 0;
+  	border-radius: 15px;
+  	text-align: left;
+  	position:relative;
+  	font-family: Arial, Helvetica, sans-serif;
+  	font-size: 0.8em;
+  }
+  progress::-webkit-progress-bar {
+  	height:11px;
+  	width:150px;
+  	margin:0 auto;
+  	background-color: #CCC;
+  	border-radius: 15px;
+  	box-shadow:0px 0px 6px #777 inset;
+  }
+  progress::-webkit-progress-value {
+  	display:inline-block;
+  	float:left;
+  	height:11px;
+  	margin:0px -10px 0 0;
+  	background: #F70;
+  	border-radius: 15px;
+  	box-shadow:0px 0px 6px #777 inset;
+  }
+  progress:after {
+  	margin:-26px 0 0 -7px;
+  	padding:0;
+  	display:inline-block;
+  	float:left;
+  	content: attr(value) '%';
+  }
