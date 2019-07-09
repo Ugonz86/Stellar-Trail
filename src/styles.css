@@ -339,3 +339,94 @@ a {
     float:left;
     /* content: attr(value) '%'; */
   }
+
+  progress#shield {
+  	display:inline-block;
+  	width:150px;
+  	height:20px;
+  	margin:0;
+  	background:none;
+  	border: 0;
+  	border-radius: 2px;
+  	text-align: center;
+  	position:relative;
+  	font-family: Arial, Helvetica, sans-serif;
+  	font-size: 0.8em;
+  }
+  progress#shield::-webkit-progress-bar {
+  	height:11px;
+  	width:150px;
+  	margin:0 auto;
+  	background-color: transparent;
+  	border-radius: 15px;
+  	box-shadow:0px 0px 6px #777 inset;
+  }
+  progress#shield::-webkit-progress-value {
+  	display:inline-block;
+  	float:left;
+  	height:8px;
+  	margin:0px -10px 0 0;
+  	background: #d400ff;
+  	box-shadow:0px 0px 6px #777 inset;
+  }
+  progress#shield:after {
+  	margin:-26px 0 0 -7px;
+  	padding:0;
+  	display:inline-block;
+  	float:left;
+  	/* content: attr(value) '%'; */
+  }
+  progress#shipHp {
+    display:inline-block;
+    width:150px;
+    height:20px;
+    margin:0;
+    background:none;
+    border: 0;
+    border-radius: 2px;
+    text-align: center;
+    position:relative;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.8em;
+  }
+  progress#shipHp::-webkit-progress-bar {
+    height:11px;
+    width:150px;
+    margin:0 auto;
+    background-color: transparent;
+    border-radius: 15px;
+    box-shadow:0px 0px 6px #777 inset;
+  }
+  progress#shipHp::-webkit-progress-value {
+    display:inline-block;
+    float:left;
+    height:8px;
+    margin:0px -10px 0 0;
+    background: #de0000;
+    box-shadow:0px 0px 6px #777 inset;
+  }
+  progress#shipHp:after {
+    margin:-26px 0 0 -7px;
+    padding:0;
+    display:inline-block;
+    float:left;
+    /* content: attr(value) '%'; */
+  }
+  /* #shipHp{
+    float: left;
+  }
+  #shipFuel{
+    float: left;
+  }
+  #Money{
+    float: left;
+  }
+  #shipParts{
+    float: left;
+  }
+  #shipOre{
+    float: left;
+  }
+  #shipWeapons{
+    float: left;
+  } */
