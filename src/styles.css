@@ -412,6 +412,42 @@ a {
     float:left;
     /* content: attr(value) '%'; */
   }
+  progress#distanceTraveled {
+    display:inline-block;
+    width:150px;
+    height:20px;
+    margin:0;
+    background:none;
+    border: 0;
+    border-radius: 2px;
+    text-align: center;
+    position:relative;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.8em;
+  }
+  progress#distanceTraveled::-webkit-progress-bar {
+    height:11px;
+    width:150px;
+    margin:0 auto;
+    background-color: transparent;
+    border-radius: 15px;
+    box-shadow:0px 0px 6px #777 inset;
+  }
+  progress#distanceTraveled::-webkit-progress-value {
+    display:inline-block;
+    float:left;
+    height:8px;
+    margin:0px -10px 0 0;
+    background: #ffffff;
+    box-shadow:0px 0px 6px #777 inset;
+  }
+  progress#distanceTraveled:after {
+    margin:-26px 0 0 -7px;
+    padding:0;
+    display:inline-block;
+    float:left;
+    content: attr(value) '%';
+  }
   /* #shipHp{
     float: left;
   }
