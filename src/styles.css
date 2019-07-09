@@ -295,7 +295,7 @@ body {
     color: #de0000;
 
   } */
-  progress {
+  progress#health {
   	display:inline-block;
   	width:150px;
   	height:20px;
@@ -308,15 +308,15 @@ body {
   	font-family: Arial, Helvetica, sans-serif;
   	font-size: 0.8em;
   }
-  progress::-webkit-progress-bar {
+  progress#health::-webkit-progress-bar {
   	height:11px;
   	width:150px;
   	margin:0 auto;
-  	background-color: #CCC;
+  	background-color: transparent;
   	border-radius: 15px;
   	box-shadow:0px 0px 6px #777 inset;
   }
-  progress::-webkit-progress-value {
+  progress#health::-webkit-progress-value {
   	display:inline-block;
   	float:left;
   	height:8px;
@@ -324,7 +324,43 @@ body {
   	background: #de0000;
   	box-shadow:0px 0px 6px #777 inset;
   }
-  progress:after {
+  progress#health:after {
+  	margin:-26px 0 0 -7px;
+  	padding:0;
+  	display:inline-block;
+  	float:left;
+  	/* content: attr(value) '%'; */
+  }
+  progress#hunger {
+  	display:inline-block;
+  	width:150px;
+  	height:20px;
+  	margin:0;
+  	background:none;
+  	border: 0;
+  	border-radius: 2px;
+  	text-align: center;
+  	position:relative;
+  	font-family: Arial, Helvetica, sans-serif;
+  	font-size: 0.8em;
+  }
+  progress#hunger::-webkit-progress-bar {
+  	height:11px;
+  	width:150px;
+  	margin:0 auto;
+  	background-color: transparent;
+  	border-radius: 15px;
+  	box-shadow:0px 0px 6px #777 inset;
+  }
+  progress#hunger::-webkit-progress-value {
+  	display:inline-block;
+  	float:left;
+  	height:8px;
+  	margin:0px -10px 0 0;
+  	background: #e3e300;
+  	box-shadow:0px 0px 6px #777 inset;
+  }
+  progress#hunger:after {
   	margin:-26px 0 0 -7px;
   	padding:0;
   	display:inline-block;
