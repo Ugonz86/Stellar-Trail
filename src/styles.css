@@ -448,6 +448,14 @@ a {
     float:left;
     content: attr(value) '%';
   }
+  .shopKeeper {
+    height: 300px;
+    width: 300px;
+  }
+  .shopItemImages {
+    height: 50px;
+    width: 50px;
+  }
   /* #shipHp{
     float: left;
   }
