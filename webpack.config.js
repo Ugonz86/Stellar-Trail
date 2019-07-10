@@ -11,13 +11,14 @@ module.exports = {
   },
   devtool: 'eval-source-map',
   devServer: {
-   contentBase: './dist'
-  },
+    contentBase: './dist'
+},
   plugins: [
     new UglifyJsPlugin({ sourceMap: true }),
+    new UglifyJsPlugin(),
     new CleanWebpackPlugin(['dist']),
     new HtmlWebpackPlugin({
-      title: 'Stellar-Trail',
+      title: 'Roman_numbers',
       template: './src/index.html',
       inject: 'body'
     })
@@ -33,20 +34,11 @@ module.exports = {
       },
       {
         test: /\.js$/,
-        exclude: /node_modules/,
-        loader: "eslint-loader"
-      },
-      // new rule
-      {
-        test: /\.js$/,
         exclude: [
           /node_modules/,
           /spec/
         ],
-        loader: "babel-loader",
-        options: {
-          presets: ['es2015']
-        }
+        loader: "eslint-loader"
       }
     ]
   }

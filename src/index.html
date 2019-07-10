@@ -25,74 +25,16 @@
   <div class="container" id="envoy">
     <div class="col-md-12">
         <div class="card" id="gameUi">
-          <div class="container" id="shop">
-            <div class="card" id="shopDesign">
-              <div class="row">
-                <div class="col-md-3" id="shopKeeper">
-                  <img src="https://vignette.wikia.nocookie.net/ultimate-marvel-cinematic-universe/images/f/fc/Arms.jpg/revision/latest?cb=20170216192149" alt="Shop Keeper" class="shopKeeper">
-                </div>
-                <div class="col-md-3">
-                  <div class="card" id="item1">
-                    <img src="https://www.todaysrdh.com/wp-content/uploads/2017/12/nanobots.png" alt="Shop Keeper" class="shopItemImages">
-                    <p>Nano bots, waaay better than tylenol </p>
-                    <button type="button" class="btn" id="purchase">Buy</button>
-                  </div>
-                </div>
-                <div class="col-md-3">
-                  <div class="card" id="item2">
-                    <img src="https://www.mreinfo.com/wp-content/uploads/2015/10/71S1bEkM-AL._SL1500_rz2.png" alt="Shop Keeper" class="shopItemImages">
-                    <p>MRE, just add water and boom calories </p>
-                    <button type="button" class="btn" id="purchase">Buy</button>
-                  </div>
-                </div>
-                <div class="col-md-3">
-                  <div class="card" id="item3">
-                    <img src="http://www.pngmart.com/files/3/Ammunition-PNG-Clipart.png" alt="Shop Keeper" class="shopItemImages">
-                    <p>Ammo for... you know, "self defense"</p>
-                    <button type="button" class="btn" id="purchase">Buy</button>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-3">
-                  <div class="card" id="item4">
-                    <img src="https://img.pngio.com/-fuel-png-300_300.png" alt="Shop Keeper" class="shopItemImages">
-                    <p>Fuel, its free! for just 50 credits!</p>
-                    <button type="button" class="btn" id="purchase">Buy</button>
-                  </div>
-                </div>
-                <div class="col-md-3">
-                  <div class="card" id="item5">
-                    <img src="https://png.pngtree.com/png-clipart/20190516/original/pngtree-a-set-of-motorcycle-parts-png-image_4173409.jpg" alt="Shop Keeper" class="shopItemImages">
-                    <p>Ship damaged? Here buy this springy thing </p>
-                    <button type="button" class="btn" id="purchase">Buy</button>
-                  </div>
-                </div>
-                <div class="col-md-3">
-                  <div class="card" id="item6">
-                    <img src="https://gamepedia.cursecdn.com/arksurvivalevolved_gamepedia/a/a2/Tek_Replicator.png" alt="Shop Keeper" class="shopItemImages">
-                    <p>Shield generators, will block almost anyhting </p>
-                    <button type="button" class="btn" id="purchase">Buy</button>
-                  </div>
-                </div>
-                <div class="col-md-3">
-                  <div class="card" id="item7">
-                    <img src="https://pngimg.com/uploads/teddy_bear/teddy_bear_PNG94.png" alt="Shop Keeper" class="shopItemImages">
-                    <p>William Jenkins, he'll keep you comfy</p>
-                    <button type="button" class="btn" id="purchase">Buy</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
           <div class="row">
             <div class="col-md-9" id="left">
             <div class="card" id="gameWindow">
               <br>
-              <h4>STELLAR TRAIL</h4>
+              <h3 id="sT">STELLAR TRAIL</h3>
               <br>
               <img src="https://worldofweirdthings.com/wp-content/uploads/eve_space_battle_1200.jpg" alt="Enemy Player" class="opponent">
-              <div class="container">
+              <br>
+              <br>
+              <div class="container" id="prompts">
                 <div class="card" id="promptStation">
                   <p> You have encountered a space station, would you like to dock or keep flying?</p>
                   <button type="button" class="btn" id="keepFlying">Keep flying</button>
@@ -103,10 +45,12 @@
                   <button type="button" class="btn" id="eventYes">Yes</button>
                   <button type="button" class="btn" id="eventNo">No</button>
                 </div>
-                <br>
-                <br>
-                <p>POSSBILE EVENT TEXT</p>
-                <br>
+                <div class="container">
+                  <br>
+                  <br>
+                  <p id="gameEvent">POSSIBLE EVENT TEXT</p>
+                  <br>
+                </div>
               </div>
             </div>
           </div>
@@ -116,7 +60,6 @@
               <h4>SHIP SIZE :(SMALL)</h4>
               <br>
               <div class="container">
-                <br>
                 <p>CARGO HOLD :</p>
                 <p id="money">MONEY :<font color="Yellow"> $0 CREDITS</font></p>
                 <p id="shipParts">REPAIR PARTS :</p>
@@ -124,27 +67,27 @@
                 <p id="shipWeapons">WEAPONS :</p>
                 <br>
                 <p id="travelDistance">DISTANCE TRAVELED :</p>
-                <progress id="distanceTraveled" value="0" max="100"></progress>
-                <p id ="elapsedTime">ELAPSED TIME : <p id=months>Months</p><p id="years"> Years</p></p>
+                <span id="distanceTraveled"></span>
                 <br>
+                <br>
+                <p id ="elapsedTime">ELAPSED TIME : <p id=months>Months</p><p id="years"> Years</p></p>
                 </div>
               </div>
               <div class="card" id="statCard">
-                <br>
                 <p>SHIP STATS</p>
                 CREW : 5
                 <br>
-                <br>
                 HP :
-                <center><progress id="shipHp" value="100" max="100"></progress></center>
+                <center><span id="shipHp"></span></center>
                 Shield :
-                <center><progress id="shield" value="100" max="100"></progress></center>
+                <center><span id="shield"></span></center>
                 Fuel :
-                <center><progress id="fuel" value="100" max="100"></progress></center>
+                <center><span id="fuel"></span></center>
                 Food :
-                <center><progress id="food" value="100" max="100"></progress></center>
+                <center><span id="food"></span></center>
                 <br>
               </div>
+              <br>
             </div>
           </div>
           <div class="row">
@@ -152,8 +95,8 @@
               <div class="card" id="actionBar">
                 <div class="row">
                   <div class="col-md-2">
-                    <button type="click" id="speedIncrease">Explore </button>
-                    <button type="click" id="speedDecrease">Keep Going</button>
+                    <button type="click" id="explore">Explore Planet</button>
+                    <button type="click" id="keepGoing">Keep Going</button>
                   </div>
                   <br>
                   <div class="col-md-2">
@@ -213,13 +156,11 @@
         </div>
       </div>
     <br>
-    <br>
-    <button type="button" class="btn" id="goBack1">Go Back</button>
+    <button type="button" class="btn" id="goHome">Home</button>
+    <button type="button" class="btn" id="restart">Restart</button>
     <br>
     <br>
   </div>
-  <br>
-  <br>
   <div class="container" id="colonize">
     <div class="col-md-12">
         <div class="card" id="gameUi">
@@ -227,13 +168,17 @@
             <div class="col-md-9" id="left">
             <div class="card" id="gameWindow">
               <br>
-              <h4>STELLAR TRAIL</h4>
+              <br>
+              <h3 id="sT">STELLAR TRAIL</h3>
+              <br>
               <br>
               <img src="https://worldofweirdthings.com/wp-content/uploads/eve_space_battle_1200.jpg" alt="Enemy Player" class="opponent">
-              <div class="container">
+              <br>
+              <br>
+              <div class="container" id="prompts2">
                 <br>
                 <br>
-                <p>POSSBILE EVENT TEXT</p>
+                <p id="gameEvent2">POSSIBLE EVENT TEXT</p>
                 <br>
               </div>
             </div>
@@ -251,14 +196,15 @@
               <p id="shipOre">ORE :</p>
               <p id="shipWeapons">WEAPONS :</p>
               <br>
+              <br>
               <p id="travelDistance">DISTANCE TRAVELED : </p>
               <progress id="distanceTraveled" value="0" max="100"></progress>
-              <p id ="elapsedTime">ELAPSED TIME : <p id=months>Months</p><p id="years"> Years</p></p>
               <br>
+              <br>
+              <p id ="elapsedTime">ELAPSED TIME : <p id=months>Months</p><p id="years"> Years</p></p>
               </div>
             </div>
             <div class="card" id="statCard">
-              <br>
               <p>SHIP STATS :</p>
               CREW : 10
               <br>
@@ -273,6 +219,7 @@
               <center><progress id="food" value="100" max="100"></progress></center>
               <br>
             </div>
+            <br>
           </div>
         </div>
         <div class="row">
@@ -280,8 +227,8 @@
             <div class="card" id="actionBar">
               <div class="row">
                 <div class="col-md-2">
-                  <button type="click" id="speedIncrease2">Explore Planet</button>
-                  <button type="click" id="speedDecrease2">Keep Going</button>
+                  <button type="click" id="explore2">Explore Planet</button>
+                  <button type="click" id="keepGoing2">Keep Going</button>
                 </div>
                 <br>
                 <div class="col-md-2">
@@ -396,16 +343,98 @@
       </div>
     </div>
     <br>
+    <button type="button" class="btn" id="goHome2">Home</button>
+    <button type="button" class="btn" id="restart">Restart</button>
     <br>
-    <button type="button" class="btn" id="goBack2">Go Back</button>
+    <br>
   </div>
+  <br>
+  <br>
 
-  <div class="container" id="resultScreen">
+  <!-- <div class="container" id="resultScreen">
     <center><p id="victory"></p></center>
     <center><p id="gameOver"></p></center>
     <br>
     <button type="button" class="btn" id="playAgain">playAgain</button>
     <button type="button" class="btn" id="goHome">Go home</button>
+    <br>
+  </div> -->
+  <div class="container" id="spaceStation">
+    <br>
+    <center><h4 id="sP">Space Station</h4></center>
+    <br>
+    <div class="row">
+      <!-- <button type="button" class="btn" id="buyFood">Buy Food</button>
+      <button type="button" class="btn" id="buyParts">Buy Parts</button>
+      <button type="button" class="btn" id="buyFuel">Buy Fuel</button>
+      <button type="button" class="btn" id="buyAmmo">Buy Ammo</button> -->
+      <div class="col-md-12">
+        <div class="container" id="station">
+          <div class="card" id="stationDesign">
+            <div class="row">
+              <div class="col-md-3" id="stationKeeper">
+                <img src="https://vignette.wikia.nocookie.net/ultimate-marvel-cinematic-universe/images/f/fc/Arms.jpg/revision/latest?cb=20170216192149" alt="stationKeeper" class="stationKeeper">
+              </div>
+              <div class="col-md-3">
+                <div class="card" id="item1">
+                  <img src="https://www.todaysrdh.com/wp-content/uploads/2017/12/nanobots.png" alt="stationKeeper" class="stationItemImages">
+                  <p>Nano bots, waaay better than tylenol </p>
+                  <button type="button" class="btn" id="purchase">Buy</button>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="card" id="item2">
+                  <img src="https://www.mreinfo.com/wp-content/uploads/2015/10/71S1bEkM-AL._SL1500_rz2.png" alt="stationKeeper" class="stationItemImages">
+                  <p>MRE, just add water and boom calories </p>
+                  <button type="button" class="btn" id="purchase">Buy</button>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="card" id="item3">
+                  <img src="http://www.pngmart.com/files/3/Ammunition-PNG-Clipart.png" alt="stationKeeper" class="stationItemImages">
+                  <p>Ammo for... you know, "self defense"</p>
+                  <button type="button" class="btn" id="purchase">Buy</button>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-3">
+                <div class="card" id="item4">
+                  <img src="https://img.pngio.com/-fuel-png-300_300.png" alt="stationKeeper" class="stationItemImages">
+                  <p>Fuel, its free! for just 50 credits!</p>
+                  <button type="button" class="btn" id="purchase">Buy</button>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="card" id="item5">
+                  <img src="https://png.pngtree.com/png-clipart/20190516/original/pngtree-a-set-of-motorcycle-parts-png-image_4173409.jpg" alt="stationKeeper" class="stationItemImages">
+                  <p>Ship damaged? Here buy this springy thing </p>
+                  <button type="button" class="btn" id="purchase">Buy</button>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="card" id="item6">
+                  <img src="https://gamepedia.cursecdn.com/arksurvivalevolved_gamepedia/a/a2/Tek_Replicator.png" alt="stationKeeper" class="stationItemImages">
+                  <p>Shield generators, will block almost anyhting </p>
+                  <button type="button" class="btn" id="purchase">Buy</button>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="card" id="item7">
+                  <img src="https://pngimg.com/uploads/teddy_bear/teddy_bear_PNG94.png" alt="stationKeeper" class="stationItemImages">
+                  <p>William Jenkins, he'll keep you comfy</p>
+                  <button type="button" class="btn" id="purchase">Buy</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <br>
+    <button id="exit">Exit</button>
+    <br>
     <br>
   </div>
 </body>

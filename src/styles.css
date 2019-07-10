@@ -22,14 +22,11 @@ body {
   font-family: 'Orbitron', sans-serif;
 }
 
-#title {
-text-shadow: 0 0 5px #00ECFF, 0 0 5px #2256F4;
-}
-#title2 {
+#title, #title2, #sP, #sT, a {
 text-shadow: 0 0 5px #00ECFF, 0 0 5px #2256F4;
 }
 
-#envoy {
+#envoy, #spaceStation, a {
   text-align: center;
   background: rgba(0, 0, 9, 0.8);
   border-radius: 4px;
@@ -157,7 +154,7 @@ a {
   border-color: transparent;
 }
 
-#goBack1, #goBack2, #speedIncrease, #speedDecrease, #speedIncrease2, #speedDecrease2, a {
+#goHome, #goHome2, #explore, #keepGoing, #explore2, #keepGoing2, #exit, #restart, a {
   background-color: transparent;
   border: none;
   color: black;
@@ -174,13 +171,13 @@ a {
   text-shadow: 0 0 5px #00ECFF, 0 0 5px #2256F4;
 }
 
-#goBack1, #goBack2, #speedIncrease, #speedDecrease, #speedIncrease2, #speedDecrease2, a {
+#goHome, #goHome2, #explore, #keepGoing, #explore2, #keepGoing2, #exit, #restart, a {
   background-color: transparent;
   color: #00ECFF;
   border: 2px solid #00ECFF, 0 0 5px #2256F4;
   border-radius: 12px;
 }
-#goBack1:hover, #goBack2:hover, #speedIncrease:hover, #speedDecrease:hover, #speedIncrease2:hover, #speedDecrease2:hover, a {
+#goHome:hover, #goHome2:hover, #explore:hover, #keepGoing:hover, #explore2:hover, #keepGoing2:hover, #exit:hover, #restart:hover, a {
   background-color: #00ECFF;
   color: black;
 }
@@ -448,11 +445,11 @@ a {
     float:left;
     content: attr(value) '%';
   }
-  .shopKeeper {
+  .stationKeeper {
     height: 200px;
     width: 200px;
   }
-  .shopItemImages {
+  .stationItemImages {
     height: 100px;
     width: 100px;
   }
@@ -462,7 +459,7 @@ a {
     background-color: black;
 
   }
-  #shopDesign {
+  #stationDesign {
     background-color: transparent;
   }
   #purchase {
