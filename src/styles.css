@@ -449,12 +449,17 @@ a {
     content: attr(value) '%';
   }
   .shopKeeper {
-    height: 300px;
-    width: 300px;
+    height: 200px;
+    width: 200px;
   }
   .shopItemImages {
-    height: 50px;
-    width: 50px;
+    height: 100px;
+    width: 100px;
+  }
+  .itemBox {
+    height: 200px;
+    width: 200px;
+    background-color: transparent;
   }
   /* #shipHp{
     float: left;
