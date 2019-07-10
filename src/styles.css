@@ -456,11 +456,37 @@ a {
     height: 100px;
     width: 100px;
   }
-  .itemBox {
+  #item1, #item2, #item3, #item4, #item5, #item6, #item7 {
     height: 200px;
     width: 200px;
+    background-color: black;
+
+  }
+  #shopDesign {
     background-color: transparent;
   }
+  #purchase {
+    border-color: transparent;
+    border: none;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    box-shadow: 0 0 5px #00ECFF, 0 0 5px #2256F4;
+    text-shadow: 0 0 5px #00ECFF, 0 0 5px #2256F4;
+  }
+
+  /* #shipType, #statCard, a {
+    background: black;
+    color: #00ECFF;
+    font-family: 'Orbitron', sans-serif;
+    border-color: transparent;
+  } */
   /* #shipHp{
     float: left;
   }
