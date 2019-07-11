@@ -5,6 +5,10 @@ body {
   background-size: cover;
 }
 
+img {
+  border-radius: 4px;
+}
+
 #home {
   text-align: center;
   background: rgba(0, 0, 9, 0.8);
@@ -22,8 +26,8 @@ body {
   font-family: 'Orbitron', sans-serif;
 }
 
-#title, #title2, #sP, #sT, a {
-text-shadow: 0 0 5px #00ECFF, 0 0 5px #2256F4;
+#title, #sP, #sT, a {
+text-shadow: 0 0 5px #2256F4, 0 0 5px #00ECFF, 1px 2px 2px #00A6FF;
 }
 
 #envoy, #spaceStation, a {
@@ -42,35 +46,44 @@ text-shadow: 0 0 5px #00ECFF, 0 0 5px #2256F4;
   border-color: transparent;
 }
 
-#gameWindow, #actionBar, a {
+#gameWindow {
+text-align: center;
 background-color:transparent;
 color: #00ECFF;
 font-family: 'Orbitron', sans-serif;
 border-color: transparent;
 }
 
-#actionBar {
-  padding-right: 25px;
-}
-
-#shipType, #statCard, a {
-  background: black;
+#shipType, #statCard, #actionBar, a {
+  text-align: center;
   color: #00ECFF;
   font-family: 'Orbitron', sans-serif;
   border-color: transparent;
+  background: rgba(0, 0, 9, 0.8);
+}
+
+#actionBar {
+  color: #00ECFF;
+  font-family: 'Orbitron', sans-serif;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  margin: 0 auto;
+  background: rgba(0, 0, 9, 0.8);
 }
 
 #colonize {
   text-align: center;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 9, 0.8);
   border-radius: 4px;
   color: #2256F4;
   font-family: 'Orbitron', sans-serif;
+  border-color: transparent;
 }
 
 #resultScreen {
   text-align: center;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 9, 0.8);
   border-radius: 4px;
   color: #0166FE;
   font-family: 'Orbitron', sans-serif;
@@ -154,7 +167,7 @@ a {
   border-color: transparent;
 }
 
-#goHome, #goHome2, #explore, #keepGoing, #explore2, #keepGoing2, #exit, #restart, a {
+#gameMenu, #gameMenu2, #exit, #restart,  a {
   background-color: transparent;
   border: none;
   color: black;
@@ -171,20 +184,21 @@ a {
   text-shadow: 0 0 5px #00ECFF, 0 0 5px #2256F4;
 }
 
-#goHome, #goHome2, #explore, #keepGoing, #explore2, #keepGoing2, #exit, #restart, a {
+#gameMenu, #gameMenu2, #exit, #restart, a {
   background-color: transparent;
   color: #00ECFF;
   border: 2px solid #00ECFF, 0 0 5px #2256F4;
   border-radius: 12px;
 }
-#goHome:hover, #goHome2:hover, #explore:hover, #keepGoing:hover, #explore2:hover, #keepGoing2:hover, #exit:hover, #restart:hover, a {
+#gameMenu:hover, #gameMenu2:hover, #exit:hover, #restart:hover, a {
   background-color: #00ECFF;
   color: black;
 }
 
 .footer {
   text-align: center;
-  background: rgba(0, 0, 0, 0.7);
+  font-family: 'Orbitron', sans-serif;
+  background: rgba(0, 0, 9, 0.8);
   border-radius: 4px;
   color: #00ECFF;
   position: fixed;
@@ -197,7 +211,7 @@ a {
   	width:150px;
   	height:20px;
   	margin:0;
-  	background:none;
+  	background: transparent;
   	border: 0;
   	border-radius: 2px;
   	text-align: center;
@@ -228,42 +242,7 @@ a {
   	float:left;
   	/* content: attr(value) '%'; */
   }
-  progress#hunger {
-  	display:inline-block;
-  	width:150px;
-  	height:20px;
-  	margin:0;
-  	background:none;
-  	border: 0;
-  	border-radius: 2px;
-  	text-align: center;
-  	position:relative;
-  	font-family: Arial, Helvetica, sans-serif;
-  	font-size: 0.8em;
-  }
-  progress#hunger::-webkit-progress-bar {
-  	height:11px;
-  	width:150px;
-  	margin:0 auto;
-  	background-color: transparent;
-  	border-radius: 15px;
-  	box-shadow:0px 0px 6px #777 inset;
-  }
-  progress#hunger::-webkit-progress-value {
-  	display:inline-block;
-  	float:left;
-  	height:8px;
-  	margin:0px -10px 0 0;
-  	background: #ffe100;
-  	box-shadow:0px 0px 6px #777 inset;
-  }
-  progress#hunger:after {
-  	margin:-26px 0 0 -7px;
-  	padding:0;
-  	display:inline-block;
-  	float:left;
-  	/* content: attr(value) '%'; */
-  }
+
   progress#fuel {
   	display:inline-block;
   	width:150px;
@@ -477,7 +456,9 @@ a {
     box-shadow: 0 0 5px #00ECFF, 0 0 5px #2256F4;
     text-shadow: 0 0 5px #00ECFF, 0 0 5px #2256F4;
   }
-
+  #row1, #row2, #row3, a {
+    margin-left: 100px;
+  }
   /* #shipType, #statCard, a {
     background: black;
     color: #00ECFF;

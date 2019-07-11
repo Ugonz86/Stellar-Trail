@@ -24,12 +24,12 @@
   </div>
   <div class="container" id="envoy">
     <div class="col-md-12">
-        <div class="card" id="gameUi">
-          <div class="row">
-            <div class="col-md-9" id="left">
+      <div class="card" id="gameUi">
+        <div class="row">
+          <div class="col-md-9" id="left">
             <div class="card" id="gameWindow">
               <br>
-              <h3 id="sT">STELLAR TRAIL</h3>
+              <h2 id="sT">S T E L L A R &nbsp T R A I L</h2>
               <br>
               <img src="https://worldofweirdthings.com/wp-content/uploads/eve_space_battle_1200.jpg" alt="Enemy Player" class="opponent">
               <br>
@@ -54,10 +54,11 @@
               </div>
             </div>
           </div>
-          <div class="col-md-3" id="right">
-            <div class="card" id="shipType">
+            <div class="col-md-3" id="right">
+              <div class="card" id="shipType">
               <br>
-              <h4>SHIP SIZE :(SMALL)</h4>
+              <br>
+              <h4>Mission: Envoy</h4>
               <br>
               <div class="container">
                 <p>CARGO HOLD :</p>
@@ -90,73 +91,67 @@
               <br>
             </div>
           </div>
-          <div class="row">
-            <div class="col-md-12">
+
               <div class="card" id="actionBar">
-                <div class="row">
-                  <div class="col-md-2">
-                    <button type="click" id="explore">Explore Planet</button>
-                    <button type="click" id="keepGoing">Keep Going</button>
-                  </div>
+                <div class="row" id="row1">
                   <br>
                   <div class="col-md-2">
                     <div class="card" id="crew1">
+                      <br>
                       <p>CREW 1</P>
                         Health :
                         <progress id="health" value="100" max="100"></progress>
-                        Hunger :
-                        <progress id="hunger" value="100" max="100"></progress>
+                        <br>
                     </div>
                   </div>
                   <br>
                   <div class="col-md-2">
                     <div class="card" id="crew2">
+                      <br>
                       <p>CREW 2</P>
                         Health :
                         <progress id="health" value="100" max="100"></progress>
-                        Hunger :
-                        <progress id="hunger" value="100" max="100"></progress>
+                        <br>
                     </div>
                   </div>
                   <br>
                   <div class="col-md-2">
                     <div class="card" id="crew3">
+                      <br>
                       <p>CREW 3</P>
                         Health :
                         <progress id="health" value="100" max="100"></progress>
-                        Hunger :
-                        <progress id="hunger" value="100" max="100"></progress>
+                        <br>
                     </div>
                   </div>
                   <br>
                   <div class="col-md-2">
                     <div class="card" id="crew4">
+                      <br>
                       <p>CREW 4</P>
                         Health :
                         <progress id="health" value="100" max="100"></progress>
-                        Hunger :
-                        <progress id="hunger" value="100" max="100"></progress>
+                        <br>
                     </div>
                   </div>
                   <br>
                   <div class="col-md-2">
                     <div class="card" id="crew5">
+                      <br>
                       <p>CREW 5</P>
                         Health :
                         <progress id="health" value="100" max="100"></progress>
-                        Hunger :
-                        <progress id="hunger" value="100" max="100"></progress>
+                        <br>
                     </div>
                   </div>
                   <br>
                 </div>
               </div>
-            </div>
-          </div>
+
         </div>
       </div>
     <br>
-    <button type="button" class="btn" id="goHome">Home</button>
+    <button type="button" class="btn" id="gameMenu">Game Menu</button>
     <button type="button" class="btn" id="restart">Restart</button>
     <br>
     <br>
@@ -166,199 +161,175 @@
         <div class="card" id="gameUi">
           <div class="row">
             <div class="col-md-9" id="left">
-            <div class="card" id="gameWindow">
-              <br>
-              <br>
-              <h3 id="sT">STELLAR TRAIL</h3>
-              <br>
-              <br>
-              <img src="https://worldofweirdthings.com/wp-content/uploads/eve_space_battle_1200.jpg" alt="Enemy Player" class="opponent">
-              <br>
-              <br>
-              <div class="container" id="prompts2">
+              <div class="card" id="gameWindow">
+                <br>
+                <h2 id="sT">S T E L L A R &nbsp T R A I L</h2>
+                <br>
+                <img src="https://worldofweirdthings.com/wp-content/uploads/eve_space_battle_1200.jpg" alt="Enemy Player" class="opponent">
+                <br>
+                <br>
+                <div class="container" id="prompts2">
                 <br>
                 <br>
                 <p id="gameEvent2">POSSIBLE EVENT TEXT</p>
                 <br>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="col-md-3" id="right">
-          <div class="card" id="shipType">
-            <br>
-            <h4>SHIP SIZE :(LARGE)</h4>
-            <br>
-            <div class="container">
-              <br>
-              <p>CARGO HOLD :</p>
-              <p id="money">MONEY :<font color="Yellow"> $0 CREDITS</font></p>
-              <p id="shipParts">REPAIR PARTS :</p>
-              <p id="shipOre">ORE :</p>
-              <p id="shipWeapons">WEAPONS :</p>
-              <br>
-              <br>
-              <p id="travelDistance">DISTANCE TRAVELED : </p>
-              <progress id="distanceTraveled" value="0" max="100"></progress>
-              <br>
-              <br>
-              <p id ="elapsedTime">ELAPSED TIME : <p id=months>Months</p><p id="years"> Years</p></p>
+            <div class="col-md-3" id="right">
+              <div class="card" id="shipType">
+                <br>
+                <br>
+                <h4>Mission: Colonize</h4>
+                <br>
+                <div class="container">
+                  <p>CARGO HOLD :</p>
+                  <p id="money">MONEY :<font color="Yellow"> $0 CREDITS</font></p>
+                  <p id="shipParts">REPAIR PARTS :</p>
+                  <p id="shipOre">ORE :</p>
+                  <p id="shipWeapons">WEAPONS :</p>
+                  <br>
+                  <p id="travelDistance">DISTANCE TRAVELED : </p>
+                  <progress id="distanceTraveled" value="0" max="100"></progress>
+                  <br>
+                  <br>
+                  <p id ="elapsedTime">ELAPSED TIME : <p id=months>Months</p><p id="years"> Years</p></p>
+                </div>
               </div>
-            </div>
-            <div class="card" id="statCard">
-              <p>SHIP STATS :</p>
-              CREW : 10
-              <br>
-              <br>
-              HP :
-              <center><progress id="shipHp" value="100" max="100"></progress></center>
-              Shields :
-              <center><progress id="shield" value="100" max="100"></progress></center>
-              Fuel :
-              <center><progress id="fuel" value="100" max="100"></progress></center>
-              Food :
-              <center><progress id="food" value="100" max="100"></progress></center>
-              <br>
-            </div>
-            <br>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-12">
-            <div class="card" id="actionBar">
-              <div class="row">
-                <div class="col-md-2">
-                  <button type="click" id="explore2">Explore Planet</button>
-                  <button type="click" id="keepGoing2">Keep Going</button>
+                <div class="card" id="statCard">
+                  <p>SHIP STATS :</p>
+                  CREW : 10
+                  <br>
+                  HP :
+                  <center><progress id="shipHp" value="100" max="100"></progress></center>
+                  Shields :
+                  <center><progress id="shield" value="100" max="100"></progress></center>
+                  Fuel :
+                  <center><progress id="fuel" value="100" max="100"></progress></center>
+                  Food :
+                  <center><progress id="food" value="100" max="100"></progress></center>
+                  <br>
                 </div>
                 <br>
+            </div>
+          </div>
+
+            <div class="card" id="actionBar">
+              <div class="row" id="row2">
                 <div class="col-md-2">
                   <div class="card" id="crew1">
+                    <br>
                     <p>CREW 1</P>
                       Health:
                       <progress id="health" value="100" max="100"></progress>
-                      Hunger:
-                      <progress id="hunger" value="100" max="100"></progress>
+                      <br>
                   </div>
                 </div>
-                <br>
                 <div class="col-md-2">
                   <div class="card" id="crew2">
+                    <br>
                     <p>CREW 2</P>
                       Health :
                       <progress id="health" value="100" max="100"></progress>
-                      Hunger :
-                      <progress id="hunger" value="100" max="100"></progress>
+                      <br>
                   </div>
                 </div>
-                <br>
                 <div class="col-md-2">
                   <div class="card" id="crew3">
+                    <br>
                     <p>CREW 3</P>
                       Health :
                       <progress id="health" value="100" max="100"></progress>
-                      Hunger :
-                      <progress id="hunger" value="100" max="100"></progress>
+                      <br>
                   </div>
                 </div>
-                <br>
                 <div class="col-md-2">
                   <div class="card" id="crew4">
+                    <br>
                     <p>CREW 4</P>
                       Health :
                       <progress id="health" value="100" max="100"></progress>
-                      Hunger :
-                      <progress id="hunger" value="100" max="100"></progress>
+                      <br>
                   </div>
                 </div>
-                <br>
                 <div class="col-md-2">
                   <div class="card" id="crew5">
+                    <br>
                     <p>CREW 5</P>
                       Health:
                       <progress id="health" value="100" max="100"></progress>
-                      Hunger:
-                      <progress id="hunger" value="100" max="100"></progress>
+                      <br>
                   </div>
                 </div>
-                <br>
               </div>
-              <div class="row">
-                <div class="col-md-2">
-                </div>
-                <br>
+
+              <div class="row" id="row3">
                 <div class="col-md-2">
                   <div class="card" id="crew6">
+                    <br>
                     <p>CREW 6</P>
                       Health:
                       <progress id="health" value="100" max="100"></progress>
-                      Hunger:
-                      <progress id="hunger" value="100" max="100"></progress>
+                      <br>
                   </div>
                 </div>
-                <br>
                 <div class="col-md-2">
                   <div class="card" id="crew7">
+                  <br>
                     <p>CREW 7</P>
                       Health:
                       <progress id="health" value="100" max="100"></progress>
-                      Hunger:
-                      <progress id="hunger" value="100" max="100"></progress>
+                      <br>
                   </div>
                 </div>
-                <br>
                 <div class="col-md-2">
                   <div class="card" id="crew8">
+                    <br>
                     <p>CREW 8</P>
                       Health:
                       <progress id="health" value="100" max="100"></progress>
-                      Hunger:
-                      <progress id="hunger" value="100" max="100"></progress>
+                      <br>
                   </div>
                 </div>
-                <br>
                 <div class="col-md-2">
                   <div class="card" id="crew9">
+                    <br>
                     <p>CREW 9</P>
-                      Health:
-                      <progress id="health" value="100" max="100"></progress>
-                      Hunger:
-                      <progress id="hunger" value="100" max="100"></progress>
+                    Health:
+                    <progress id="health" value="100" max="100"></progress>
+                    <br>
                   </div>
                 </div>
-                <br>
                 <div class="col-md-2">
                   <div class="card" id="crew10">
+                    <br>
                     <p>CREW 10</P>
                       Health:
                       <progress id="health" value="100" max="100"></progress>
-                      Hunger:
-                      <progress id="hunger" value="100" max="100"></progress>
+                      <br>
                   </div>
                 </div>
-                <br>
               </div>
             </div>
           </div>
-        </div>
+          <br>
+          <button type="button" class="btn" id="gameMenu2">Game Menu</button>
+          <button type="button" class="btn" id="restart">Restart</button>
+          <br>
+        <br>
       </div>
     </div>
-    <br>
-    <button type="button" class="btn" id="goHome2">Home</button>
-    <button type="button" class="btn" id="restart">Restart</button>
-    <br>
-    <br>
-  </div>
-  <br>
-  <br>
+          <br>
+          <br>
 
-  <!-- <div class="container" id="resultScreen">
-    <center><p id="victory"></p></center>
-    <center><p id="gameOver"></p></center>
-    <br>
-    <button type="button" class="btn" id="playAgain">playAgain</button>
-    <button type="button" class="btn" id="goHome">Go home</button>
-    <br>
-  </div> -->
+        <!-- <div class="container" id="resultScreen">
+          <center><p id="victory"></p></center>
+          <center><p id="gameOver"></p></center>
+          <br>
+          <button type="button" class="btn" id="playAgain">playAgain</button>
+          <button type="button" class="btn" id="goHome">Go home</button>
+          <br>
+        </div> -->
   <div class="container" id="spaceStation">
     <br>
     <center><h4 id="sP">Space Station</h4></center>
