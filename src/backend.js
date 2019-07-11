@@ -53,17 +53,17 @@ export class Planets {
 }
 
 export class SpaceEvents {
-  gravityWell(fuel){
-    return fuel - 2000;
+  gravityWell(ship, ynChoice){
+    ship.fuel -= 2000;
+    return ship;
   }
 
-  astroidBelt(ship){
-    let shieldReply = prompt("Use shields? y/n");
-    if (shieldReply === "y" && ship.shield >= 300) {
-      alert("Got past threat!");
+  astroidBelt(ship, ynChoice){
+    if (ynChoice === 1 && ship.shield >= 300) {
+      ("Got past threat!");
         ship.shield -= 300;
       }else {
-        alert("Your ship takes damage!");
+        ("Your ship takes damage!");
         for (let i = 0; i < ship.crew.length; i++) {
           ship.crew[i].health -= 30;
         }
@@ -72,13 +72,12 @@ export class SpaceEvents {
     return ship;
   }
 
-  meteors(ship){
-    let shieldReply = prompt("Use shields? y/n");
-    if (shieldReply === "y" && ship.shield >= 100) {
-      alert("Got past threat!");
+  meteors(ship, ynChoice){
+    if (ynChoice === 1 && ship.shield >= 100) {
+      ("Got past threat!");
         ship.shield -= 100;
       }else {
-        alert("Your ship takes damage!");
+        ("Your ship takes damage!");
         for (let i = 0; i < ship.crew.length; i++) {
           ship.crew[i].health -= 30;
         }
@@ -87,13 +86,12 @@ export class SpaceEvents {
     return ship;
   }
 
-  spacePirates(ship){
-    let fightReply = prompt("Fight off Space Pirates? y/n");
-    if (fightReply === "y" && ship.ammo >= 40) {
-      alert("Fought off Space Pirates!");
+  spacePirates(ship, ynChoice){
+    if (ynChoice === 1 && ship.ammo >= 40) {
+      ("Fought off Space Pirates!");
         ship.ammo -= 40;
       }else {
-        alert("Space pirates attacked and plundered your ship!");
+        ("Space pirates attacked and plundered your ship!");
         for (let i = 0; i < ship.crew.length; i++) {
           ship.crew[i].health -= 30;
         }
@@ -106,43 +104,46 @@ export class SpaceEvents {
       return ship;
   }
 
-  spaceVirus(crew){
+  spaceVirus(ship, ynChoice){
     let die1 = Math.floor(Math.random() * 4);
-      crew[die1].health -= 100;
+      ship.crew[die1].health -= 100;
+      return ship;
   }
 
-  spaceMadness(crew){
+  spaceMadness(ship, ynChoice){
 
-    for (let i = 1; i < crew.length; i++) {
-      crew[i].health -= 40;
+    for (let i = 1; i < ship.crew.length; i++) {
+      ship.crew[i].health -= 40;
     }
+    return ship;
   }
 
-  alienEncounter(crew){
+  alienEncounter(ship, ynChoice){
 
     let die1 = Math.floor(Math.random() * 6 + 1);
     if (die1 % 2 === 0) {
-      alert("alien fucks you up");
-      for (let i = 0; i < crew.length; i++) {
-        crew[i].health -= 30;
+      ("alien fucks you up");
+      for (let i = 0; i < ship.crew.length; i++) {
+        ship.crew[i].health -= 30;
       }
     } else {
-      alert("alien says hello!");
+      ("alien says hello!");
     }
+    return ship;
   }
 
-  wormhole(distance){
-    let choice = prompt("Wormhole detected, enter? y/n?");
-    if (choice === "y") {
-      let die1 = Math.floor(Math.random() * 600 + 1);
-      return die1 * 1000;
+  wormhole(ship, ynChoice){
+    if (ynChoice === 1) {
+      ship.distance = Math.floor(Math.random() * 600 + 1);
+      ship.distance *= 1000;
+      return ship;
     } else {
-      return distance;
+      return ship;
     }
   }
 
-  spaceStation(ship) {
-    alert("spaceStation");
+  spaceStation(ship, ynChoice) {
+    ("spaceStation");
     ship.money += ship.materials * 10;
     ship.materials = 0;
     let buyFood = parseInt(prompt("How much food $10/ea"));
@@ -151,7 +152,7 @@ export class SpaceEvents {
     let buyAmmo = parseInt(prompt("How much Ammo $50/ea"));
     let total = (buyFood * 10) + (buyParts * 100) + (buyFuel * 10) + (buyAmmo * 50);
     while (total > ship.money || ship.foodcap < ship.food + buyFood || ship.fuelCap < ship.fuel + buyFuel || buyFood === undefined || buyParts === undefined) {
-        alert("Get serious");
+        ("Get serious");
         buyFood = parseInt(prompt("How much food $10/ea"));
         buyParts = parseInt(prompt("How much Parts $100/ea"));
         buyFuel = parseInt(prompt("How much fuel $10/ea"));
@@ -183,9 +184,8 @@ export class SpaceEvents {
   }
 
 
-  ghostStation(ship) {
-    let choice = prompt("Would you like to explore Ghost Station? y/n?");
-    if (choice === "y") {
+  ghostStation(ship, ynChoice) {
+    if (ynChoice === 1) {
     let die1 = Math.floor(Math.random() * 2);
     if (die1 === 1) {
       ship.fuel += 5000;
@@ -221,11 +221,12 @@ export class SpaceEvents {
     if (die1 === 1) {
       for (let i = 0; i < ship.crew.length; i++) {
         ship.crew[i].health -= 30;
-        alert(ship.crew[i].health);
+        (ship.crew[i].health);
       }
     }
   } else {
-    alert("You left the station alone");
+    ("You left the station alone");
   }
+  return ship;
   }
 }
