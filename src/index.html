@@ -11,13 +11,13 @@
     <br>
     <h3>A &nbsp r a c e &nbsp t o &nbsp t h e &nbsp e n d</h3>
     <br>
-    <button type="button" class="btn" id="start">START!</button>
+    <button type="submit" class="button" id="start">START!</button>
   </div>
   <div class="container" id="gameSelector">
     <br>
     <br>
     <button type="button" class="btn" id="game1">ENVOY</button>
-    <button type="button" class="btn" id="game2">COLONIZE</button>
+    <!-- <button type="button" class="btn" id="game2">COLONIZE</button> -->
     <br>
     <br>
     <br>
@@ -31,11 +31,11 @@
               <br>
               <h2 id="sT">S T E L L A R &nbsp T R A I L</h2>
               <br>
-              <img src="https://worldofweirdthings.com/wp-content/uploads/eve_space_battle_1200.jpg" alt="Enemy Player" class="opponent">
+              <img src="https://cdnb.artstation.com/p/assets/images/images/004/203/771/original/david-boyle-ship-animation.gif?1481299250" alt="Enemy Player" class="opponent">
               <br>
               <br>
-              <div class="container" id="eventAction">
-                <div class="card" id="spaceEvent">
+              <div class="container" id="prompts">
+                <div class="card" id="promptEvent">
                   <p id="eventText">Event Text goes here</p>
                   <button type="button" class="btn" id="eventYes">Yes</button>
                   <button type="button" class="btn" id="eventNo">No</button>
@@ -43,7 +43,7 @@
                 <div class="container">
                   <br>
                   <br>
-                  <p id="gameEvent">POSSIBLE EVENT TEXT</p>
+                  <p id="gameEvent"></p>
                   <br>
                 </div>
               </div>
@@ -86,72 +86,70 @@
               <br>
             </div>
           </div>
-
-              <div class="card" id="actionBar">
-                <div class="row" id="row1">
+          <div class="card" id="actionBar">
+            <div class="row" id="row1">
+              <br>
+              <div class="col-md-2">
+                <div class="card" id="crew1">
                   <br>
-                  <div class="col-md-2">
-                    <div class="card" id="crew1">
-                      <br>
-                      <p>CREW 1</P>
-                        Health :
-                        <progress id="health" value="100" max="100"></progress>
-                        <br>
-                    </div>
-                  </div>
-                  <br>
-                  <div class="col-md-2">
-                    <div class="card" id="crew2">
-                      <br>
-                      <p>CREW 2</P>
-                        Health :
-                        <progress id="health" value="100" max="100"></progress>
-                        <br>
-                    </div>
-                  </div>
-                  <br>
-                  <div class="col-md-2">
-                    <div class="card" id="crew3">
-                      <br>
-                      <p>CREW 3</P>
-                        Health :
-                        <progress id="health" value="100" max="100"></progress>
-                        <br>
-                    </div>
-                  </div>
-                  <br>
-                  <div class="col-md-2">
-                    <div class="card" id="crew4">
-                      <br>
-                      <p>CREW 4</P>
-                        Health :
-                        <progress id="health" value="100" max="100"></progress>
-                        <br>
-                    </div>
-                  </div>
-                  <br>
-                  <div class="col-md-2">
-                    <div class="card" id="crew5">
-                      <br>
-                      <p>CREW 5</P>
-                        Health :
-                        <progress id="health" value="100" max="100"></progress>
-                        <br>
-                    </div>
-                  </div>
-                  <br>
+                  <p>CREW 1</P>
+                    Health :
+                    <span id="health0"></span>
+                    <br>
                 </div>
               </div>
-
+              <br>
+              <div class="col-md-2">
+                <div class="card" id="crew2">
+                  <br>
+                  <p>CREW 2</P>
+                    Health :
+                    <span id="health1"></span>
+                    <br>
+                </div>
+              </div>
+              <br>
+              <div class="col-md-2">
+                <div class="card" id="crew3">
+                  <br>
+                  <p>CREW 3</P>
+                    Health :
+                    <span id="health2"></span>
+                    <br>
+                </div>
+              </div>
+              <br>
+              <div class="col-md-2">
+                <div class="card" id="crew4">
+                  <br>
+                  <p>CREW 4</P>
+                    Health :
+                    <span id="health3"></span>
+                    <br>
+                </div>
+              </div>
+              <br>
+              <div class="col-md-2">
+                <div class="card" id="crew5">
+                  <br>
+                  <p>CREW 5</P>
+                    Health :
+                    <span id="health4"></span>
+                    <br>
+                </div>
+              </div>
+              <br>
+            </div>
+          </div>
         </div>
       </div>
     <br>
     <button type="button" class="btn" id="gameMenu">Game Menu</button>
-    <button type="button" class="btn" id="restart">Restart</button>
+    <button type="button" class="btn" id="goHome">Go Home</button>
     <br>
     <br>
   </div>
-  <div class="container" id="colonize">
+  <!-- <div class="container" id="colonize">
     <div class="col-md-12">
         <div class="card" id="gameUi">
           <div class="row">
@@ -163,7 +161,7 @@
                 <img src="https://worldofweirdthings.com/wp-content/uploads/eve_space_battle_1200.jpg" alt="Enemy Player" class="opponent">
                 <br>
                 <br>
-                <div class="container" id="eventAction2">
+                <div class="container" id="prompts2">
                 <br>
                 <br>
                 <p id="gameEvent2">POSSIBLE EVENT TEXT</p>
@@ -221,7 +219,7 @@
                   </div>
                 </div>
                 <div class="col-md-2">
-                  <div class="card" id="crew2">
+                  <div class="card" id="crew3">
                     <br>
                     <p>CREW 2</P>
                       Health :
@@ -289,7 +287,7 @@
                 <div class="col-md-2">
                   <div class="card" id="crew9">
                     <br>
-                    <p>CREW 9</P>
+                    <p>CREW 9</p>
                     Health:
                     <progress id="health" value="100" max="100"></progress>
                     <br>
@@ -298,7 +296,7 @@
                 <div class="col-md-2">
                   <div class="card" id="crew10">
                     <br>
-                    <p>CREW 10</P>
+                    <p>CREW10</P>
                       Health:
                       <progress id="health" value="100" max="100"></progress>
                       <br>
@@ -309,89 +307,98 @@
           </div>
           <br>
           <button type="button" class="btn" id="gameMenu2">Game Menu</button>
-          <button type="button" class="btn" id="restart">Restart</button>
+          <button type="button" class="btn" id="goHome2">Go Home</button>
           <br>
         <br>
       </div>
     </div>
           <br>
-          <br>
+          <br> -->
 
-        <!-- <div class="container" id="resultScreen">
-          <center><p id="victory"></p></center>
-          <center><p id="gameOver"></p></center>
-          <br>
-          <button type="button" class="btn" id="playAgain">playAgain</button>
-          <button type="button" class="btn" id="goHome">Go home</button>
-          <br>
-        </div> -->
   <div class="container" id="spaceStation">
     <br>
-    <center><h4 id="sP">Space Station</h4></center>
+    <center><h2 id="sP">S P A C E &nbsp S T A T I O N</h2></center>
     <br>
     <div class="row">
-      <!-- <button type="button" class="btn" id="buyFood">Buy Food</button>
-      <button type="button" class="btn" id="buyParts">Buy Parts</button>
-      <button type="button" class="btn" id="buyFuel">Buy Fuel</button>
-      <button type="button" class="btn" id="buyAmmo">Buy Ammo</button> -->
       <div class="col-md-12">
         <div class="container" id="station">
           <div class="card" id="stationDesign">
-            <div class="row">
-              <div class="col-md-3" id="stationKeeper">
-                <img src="https://vignette.wikia.nocookie.net/ultimate-marvel-cinematic-universe/images/f/fc/Arms.jpg/revision/latest?cb=20170216192149" alt="stationKeeper" class="stationKeeper">
-              </div>
+            <div class="row" id="row4">
               <div class="col-md-3">
                 <div class="card" id="item1">
-                  <img src="https://www.todaysrdh.com/wp-content/uploads/2017/12/nanobots.png" alt="stationKeeper" class="stationItemImages">
-                  <p>Nano bots, waaay better than tylenol </p>
-                  <button type="button" class="btn" id="purchase">Buy</button>
+                  <br>
+                  <img src="https://img.pngio.com/-fuel-png-300_300.png" alt="stationKeeper" class="stationItemImages">
+                  <br>
+                  <p>Fuel, its free! for just 50 credits!</p>
+                  <input type="number" name="qty" id="fuel">
+                  <button type="button" class="btn fuelpurchase" id="purchase">Buy</button>
                 </div>
               </div>
               <div class="col-md-3">
                 <div class="card" id="item2">
+                  <br>
                   <img src="https://www.mreinfo.com/wp-content/uploads/2015/10/71S1bEkM-AL._SL1500_rz2.png" alt="stationKeeper" class="stationItemImages">
+                  <br>
                   <p>MRE, just add water and boom calories </p>
-                  <button type="button" class="btn" id="purchase">Buy</button>
+                  <input type="number" name="qty" id="mre">
+                  <button type="button" class="btn mrepurchase" id="purchase">Buy</button>
                 </div>
               </div>
               <div class="col-md-3">
                 <div class="card" id="item3">
+                  <br>
                   <img src="http://www.pngmart.com/files/3/Ammunition-PNG-Clipart.png" alt="stationKeeper" class="stationItemImages">
+                  <br>
                   <p>Ammo for... you know, "self defense"</p>
-                  <button type="button" class="btn" id="purchase">Buy</button>
+                  <input type="number" name="qty" id="ammo">
+                  <button type="button" class="btn ammopurchase" id="purchase">Buy</button>
                 </div>
               </div>
+              <br>
+              <br>
             </div>
-            <div class="row">
+            <br>
+            <br>
+            <br>
+            <br>
+            <div class="row" id="row5">
               <div class="col-md-3">
                 <div class="card" id="item4">
-                  <img src="https://img.pngio.com/-fuel-png-300_300.png" alt="stationKeeper" class="stationItemImages">
-                  <p>Fuel, its free! for just 50 credits!</p>
-                  <button type="button" class="btn" id="purchase">Buy</button>
+                  <br>
+                  <img src="https://www.todaysrdh.com/wp-content/uploads/2017/12/nanobots.png" alt="stationKeeper" class="stationItemImages">
+                  <br>
+                  <p>Nano bots, waaay better than tylenol </p>
+
+                  <button type="button" class="btn nanopurchase" id="purchase">Buy</button>
                 </div>
               </div>
+              <br>
+              <br>
               <div class="col-md-3">
                 <div class="card" id="item5">
+                  <br>
                   <img src="https://png.pngtree.com/png-clipart/20190516/original/pngtree-a-set-of-motorcycle-parts-png-image_4173409.jpg" alt="stationKeeper" class="stationItemImages">
+                  <br>
                   <p>Ship damaged? Here buy this springy thing </p>
-                  <button type="button" class="btn" id="purchase">Buy</button>
+
+                  <button type="button" class="btn repairpurchase" id="purchase">Buy</button>
                 </div>
               </div>
+              <br>
+              <br>
               <div class="col-md-3">
                 <div class="card" id="item6">
+                  <br>
                   <img src="https://gamepedia.cursecdn.com/arksurvivalevolved_gamepedia/a/a2/Tek_Replicator.png" alt="stationKeeper" class="stationItemImages">
+                  <br>
                   <p>Shield generators, will block almost anyhting </p>
-                  <button type="button" class="btn" id="purchase">Buy</button>
+
+                  <button type="button" class="btn shieldpurchase" id="purchase">Buy</button>
+                  <br>
                 </div>
               </div>
-              <div class="col-md-3">
-                <div class="card" id="item7">
-                  <img src="https://pngimg.com/uploads/teddy_bear/teddy_bear_PNG94.png" alt="stationKeeper" class="stationItemImages">
-                  <p>William Jenkins, he'll keep you comfy</p>
-                  <button type="button" class="btn" id="purchase">Buy</button>
-                </div>
-              </div>
+              <br>
+              <br>
             </div>
           </div>
         </div>
@@ -399,10 +406,14 @@
     </div>
     <br>
     <br>
+    <br>
+    <br>
     <button id="exit">Exit</button>
     <br>
     <br>
   </div>
+  <br>
+  <br>
 </body>
 <br>
 <div class="footer">

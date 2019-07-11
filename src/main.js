@@ -7,11 +7,11 @@ import {Ship,Crew,Planets,SpaceEvents} from "./backend.js";
 $(document).ready(function() {
   $("#gameSelector").hide();
   $("#envoy").hide();
-  $("#colonize").hide();
+  // $("#colonize").hide();
   $("#Screen").hide();
   $("#spaceStation").hide();
-  $("#eventAction").hide();
-  $("#eventAction2").hide();
+  $("#prompts").hide();
+  $("#prompts2").hide();
   // $("#gameEvent").hide();
   // $("#gameEvent2").hide();
 
@@ -27,7 +27,7 @@ $(document).ready(function() {
     let missionEnvoy = new Ship(500,1000000);
     let spacemonths = 0;
     let spaceyears = 0;
-    let planetArray = [];
+    // let planetArray = [];
     let numOfCrew = 5;
     let pause = 1;
     let whyGod = new SpaceEvents;
@@ -36,9 +36,9 @@ $(document).ready(function() {
       missionEnvoy.crew[c] = new Crew();
     }
 
-    for (let p = 0; p <= 20; p++) {
-      planetArray[p] = new Planets();
-    }
+    // for (let p = 0; p <= 20; p++) {
+    //   planetArray[p] = new Planets();
+    // }
 
     let timer = [];
     timer[0] = setInterval(logM, 1000);
@@ -68,7 +68,7 @@ $(document).ready(function() {
       $("#fuel").html("<progress id='fuel' value=" + Math.floor(missionEnvoy.fuel * 100 / missionEnvoy.fuelcap) + " max='100'></progress>");
       $("#food").html("<progress id='food' value=" + Math.floor(missionEnvoy.food * 100 / missionEnvoy.foodcap) + " max='100'></progress>");
       $("#shield").html("<progress id='shield' value=" + Math.floor(missionEnvoy.shield / 10) + " max='100'></progress>");
-      $("#money").html("ship money: " + missionEnvoy.money);
+      $("#money").html("ship money: <span id='money'>" + missionEnvoy.money + "</span>");
       $("#shipWeapons").html("ship ammo: " + missionEnvoy.ammo);
       $("#travelDistance").html("Distance: " + missionEnvoy.distance);
       $("#distanceTraveled").html("<progress id='distanceTraveled' value=" + Math.floor(missionEnvoy.distance * 100 / 600000) + " max='100'></progress>");
@@ -82,27 +82,39 @@ $(document).ready(function() {
       gameOverCheck();
       winCheck();
     }
+    function showSpaceShop(){
+      missionEnvoy.money += missionEnvoy.materials * 50;
+      missionEnvoy.materials = 0;
+      $("#spaceStation").show();
+      $("#envoy").hide();
+    }
 
     function spaceHappenings(gamedist) {
       if (gamedist === 10000) {
-        whyGod.spaceStation(missionEnvoy);
+          showSpaceShop();
+        // whyGod.spaceStation(missionEnvoy);
       }
       if (gamedist === 120000) {
-        whyGod.spaceStation(missionEnvoy);
+        showSpaceShop();
+        // whyGod.spaceStation(missionEnvoy);
       }
       if (gamedist === 240000) {
-        whyGod.spaceStation(missionEnvoy);
+        showSpaceShop();
+        // whyGod.spaceStation(missionEnvoy);
       }
       if (gamedist === 360000) {
-        whyGod.spaceStation(missionEnvoy);
+        showSpaceShop();
+        // whyGod.spaceStation(missionEnvoy);
       }
       if (gamedist === 600000) {
-        whyGod.spaceStation(missionEnvoy);
+        showSpaceShop();
+        // whyGod.spaceStation(missionEnvoy);
       }
 
-      if (gamedist % 30000 === 0) {
-        planetEvents();
-      }
+      // if (gamedist % 30000 === 0) {
+      //   $("p#eventText").html("Would you like to explore planet?");
+      //   planetEvents();
+      // }
 
       if (gamedist % 70000 === 0) {
         $("p#eventText").html("astroidBelt");
@@ -121,9 +133,9 @@ $(document).ready(function() {
     }
 
     function thingsHappen(){
-      let die1 = Math.floor(Math.random() * 10 + 1);
+      let die1 = Math.floor(Math.random() * 9 + 1);
       let watHappun = "";
-      $("#eventAction").show();
+      $("#prompts").show();
       if (die1 === 1){
         $("p#eventText").html("You encounter a Gravity well! You will loose fuel to escape its pull!");
         watHappun = 'gravityWell';
@@ -169,54 +181,56 @@ $(document).ready(function() {
         watHappun = 'ghostStation';
         // missionEnvoy = whyGod[watHappun](missionEnvoy);
       }
-      if (die1 === 10){
-        $("p#eventText").html("Space Station, enter and refit?");
-        watHappun = 'spaceStation';
-        // missionEnvoy = whyGod[watHappun](missionEnvoy);
-      }
+      // if (die1 === 10){
+      //   $("p#eventText").html("Space Station, enter and refit?");
+      //   showSpaceShop();
+      //   watHappun = 'spaceStation';
+      //   // missionEnvoy = whyGod[watHappun](missionEnvoy);
+      // }
       pauseFunction();
       return watHappun;
     }
 
-    function planetEvents(){
-      let die1 = Math.floor(Math.random() * 20 + 1);
-      $("p#eventText").html("You have found a " + planetArray[die1].environment() + " planet");
-      let choice = ("Would you like to explore? y/n?");
-      if (choice === "y") {
-        if(planetArray[die1].environment() === "Hospitable") {
-          if (planetArray[die1].lifeforms === "friendly") {
-            $("p#eventText").html("You found friendly aliens!");
-            missionEnvoy.food += 2000;
-            missionEnvoy.fuel += 3000;
-            missionEnvoy.materials +=  planetArray[die1].materials;
-          } else {
-            $("p#eventText").html("You find hostile aliens! They attack!");
-            let fightReply = ("Fight off aliens? y/n");
-            if (fightReply === "y" && missionEnvoy.ammo >= 10) {
-              $("p#eventText").html("Fought off aliens");
-              missionEnvoy.ammo -= 10;
-              missionEnvoy.food += 3000;
-              missionEnvoy.fuel += 3000;
-              missionEnvoy.materials +=  planetArray[die1].materials;
-            } else {
-              $("p#eventText").html("Aliens attacked your crew!");
-              for (let i = 0; i < missionEnvoy.crew.length; i++) {
-                missionEnvoy.crew[i].health -= 30;
-              }
-            }
-          }
-          missionEnvoy.fuel -= planetArray[die1].gravity;
-          $("p#eventText").html("cost to escape planet: " + planetArray[die1].gravity);
-        } else {
-          missionEnvoy.materials +=  planetArray[die1].materials;
-          missionEnvoy.fuel -= planetArray[die1].gravity;
-          $("p#eventText").html("cost to escape planet: " + planetArray[die1].gravity);
-        }
-      }
-    }
+    // function planetEvents(){
+    //   let die1 = Math.floor(Math.random() * 20 + 1);
+    //   $("p#eventText").html("You have found a " + planetArray[die1].environment() + " planet");
+    //   let choice = ("Would you like to explore? y/n?");
+    //   if (choice === "y") {
+    //     if(planetArray[die1].environment() === "Hospitable") {
+    //       if (planetArray[die1].lifeforms === "friendly") {
+    //         $("p#eventText").html("You found friendly aliens!");
+    //         missionEnvoy.food += 2000;
+    //         missionEnvoy.fuel += 3000;
+    //         missionEnvoy.materials +=  planetArray[die1].materials;
+    //       } else {
+    //         $("p#eventText").html("You find hostile aliens! They attack!");
+    //         let fightReply = ("Fight off aliens? y/n");
+    //         if (fightReply === "y" && missionEnvoy.ammo >= 10) {
+    //           $("p#eventText").html("Fought off aliens");
+    //           missionEnvoy.ammo -= 10;
+    //           missionEnvoy.food += 3000;
+    //           missionEnvoy.fuel += 3000;
+    //           missionEnvoy.materials +=  planetArray[die1].materials;
+    //         } else {
+    //           $("p#eventText").html("Aliens attacked your crew!");
+    //           for (let i = 0; i < missionEnvoy.crew.length; i++) {
+    //             missionEnvoy.crew[i].health -= 30;
+    //           }
+    //         }
+    //       }
+    //       missionEnvoy.fuel -= planetArray[die1].gravity;
+    //       $("p#eventText").html("cost to escape planet: " + planetArray[die1].gravity);
+    //     } else {
+    //       missionEnvoy.materials +=  planetArray[die1].materials;
+    //       missionEnvoy.fuel -= planetArray[die1].gravity;
+    //       $("p#eventText").html("cost to escape planet: " + planetArray[die1].gravity);
+    //     }
+    //   }
+    // }
 
     function gameOverCheck(){
       if (missionEnvoy.hp <= 0 || missionEnvoy.fuel <= 0 || missionEnvoy.crew.length === 0 || missionEnvoy.food <= 0) {
+              $("#prompts").show();
         $("p#eventText").html("game over!");
           pauseFunction();
       }
@@ -232,6 +246,7 @@ $(document).ready(function() {
 
     function winCheck(){
       if (missionEnvoy.distance >= 600000) {
+              $("#prompts").show();
         $("p#eventText").html("You are Oregon Space!");
         pauseFunction();
       }
@@ -262,53 +277,97 @@ $(document).ready(function() {
     //   pauseFunction();
     //   $("#eventYes").click(function(){
     //     startStop();
-    //     $("#eventAction").hide();
+    //     $("#prompts").hide();
     //   });
     //   $("#eventNo").click(function(){
     //     startStop();
-    //     $("#eventAction").hide();
+    //     $("#prompts").hide();
     //   });
     // }
 let ynChoice = 0;
-    $("#eventYes").click(function(){
+    $("button#eventYes").click(function(){
       startStop();
       ynChoice = 1;
       missionEnvoy = whyGod[happenings](missionEnvoy, ynChoice);
-      $("#eventAction").hide();
+      $("#prompts").hide();
     });
-    $("#eventNo").click(function(){
+    $("button#eventNo").click(function(){
       startStop();
       ynChoice = 2;
       missionEnvoy = whyGod[happenings](missionEnvoy, ynChoice);
-      $("#eventAction").hide();
+      $("#prompts").hide();
+    });
+
+
+    $("button.fuelpurchase").click(function(){
+      let boughtFuel = parseInt($("input#fuel").val());
+      missionEnvoy.fuel += boughtFuel;
+      missionEnvoy.money -= boughtFuel * 50;
+    });
+
+    $("button.mrepurchase").click(function(){
+      let boughtfood = parseInt($("input#mre").val());
+      missionEnvoy.food += boughtfood;
+      missionEnvoy.money -= boughtfood * 50;
+    });
+
+    $("button.ammopurchase").click(function(){
+      let boughtAmmo = parseInt($("input#ammo").val());
+      missionEnvoy.ammo += boughtAmmo;
+      missionEnvoy.money -= boughtAmmo * 200;
+    });
+
+    $("button.nanopurchase").click(function(){
+      for (let i = 0; i < missionEnvoy.crew.length; i++) {
+        missionEnvoy.crew[i].health = 300;
+      }
+        missionEnvoy.money -= 10000;
+    });
+
+    $("button.repairpurchase").click(function(){
+      missionEnvoy.hp = 1000;
+      missionEnvoy.money -= 5000;
+    });
+
+    $("button.shieldpurchase").click(function(){
+      missionEnvoy.shield = 1000;
+      missionEnvoy.money -= 1000;
     });
   });
 
 
-  $("#game2").click(function() {
-    $("#gameSelector").hide();
-    $("#colonize").show();
-  });
+  // $("#game2").click(function() {
+  //   $("#gameSelector").hide();
+  //   $("#colonize").show();
+  // });
 
   $("#gameMenu").click(function() {
     $("#envoy").hide();
     $("#gameSelector").show();
   });
 
-  $("#gameMenu2").click(function() {
-    $("#colonize").hide();
-    $("#gameSelector").show();
-  });
+  // $("#gameMenu2").click(function() {
+  //   $("#colonize").hide();
+  //   $("#gameSelector").show();
+  // });
 
-  $("#playAgain").click(function() {
-    $("#resultScreen").hide();
-    $("#gameSelector").show();
-  });
+  // $("#playAgain").click(function() {
+  //   $("#resultScreen").hide();
+  //   $("#gameSelector").show();
+  // });
 
   $("#goHome").click(function() {
     $("#resultScreen").hide();
     $("#home").show();
   });
+
+  $("#exit").click(function() {
+  $("#spaceStation").hide();
+  $("#prompts").hide();
+  $("#envoy").show();
+  pause = 2;
+  startStop();
+});
 
 
 

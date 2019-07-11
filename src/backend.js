@@ -142,46 +142,47 @@ export class SpaceEvents {
     }
   }
 
-  spaceStation(ship, ynChoice) {
-    ("spaceStation");
-    ship.money += ship.materials * 10;
-    ship.materials = 0;
-    let buyFood = parseInt(prompt("How much food $10/ea"));
-    let buyParts = parseInt(prompt("How much Parts $100/ea"));
-    let buyFuel = parseInt(prompt("How much fuel $10/ea"));
-    let buyAmmo = parseInt(prompt("How much Ammo $50/ea"));
-    let total = (buyFood * 10) + (buyParts * 100) + (buyFuel * 10) + (buyAmmo * 50);
-    while (total > ship.money || ship.foodcap < ship.food + buyFood || ship.fuelCap < ship.fuel + buyFuel || buyFood === undefined || buyParts === undefined) {
-        ("Get serious");
-        buyFood = parseInt(prompt("How much food $10/ea"));
-        buyParts = parseInt(prompt("How much Parts $100/ea"));
-        buyFuel = parseInt(prompt("How much fuel $10/ea"));
-        buyAmmo = parseInt(prompt("How much Ammo $50/ea"));
-        total = (buyFood * 50) + (buyParts * 100) + (buyFuel * 10) + (buyAmmo * 50);
-      }
-    let repaircost = 1000 - ship.hp;
-    let repairReply = prompt("Repairing will take" + repaircost / 100 + " ship parts, proceed?? y/n");
-    if (repairReply === "y") {
-      ship.hp = 1000;
-      ship.parts -= repaircost / 100;
-    }
-    let healReply = prompt("Heal crew for $1000? y/n");
-    if (healReply === "y") {
-      for (let i = 0; i < ship.crew.length; i++) {
-        ship.crew[i].health = 300;
-      }
-    }
-    let shieldReply = prompt("Fully recharge Shield for $10,000? y/n");
-    if (shieldReply === "y") {
-      ship.shield = 1000;
-    }
-    ship.fuel += buyFuel;
-    ship.parts += buyParts;
-    ship.food += buyFood;
-    ship.ammo += buyAmmo;
-    ship.money -= total;
-    return ship;
-  }
+  // spaceStation(ship, ynChoice) {
+  //
+  //   ("spaceStation");
+  //   ship.money += ship.materials * 10;
+  //   ship.materials = 0;
+  //   let buyFood = parseInt(prompt("How much food $10/ea"));
+  //   let buyParts = parseInt(prompt("How much Parts $100/ea"));
+  //   let buyFuel = parseInt(prompt("How much fuel $10/ea"));
+  //   let buyAmmo = parseInt(prompt("How much Ammo $50/ea"));
+  //   let total = (buyFood * 10) + (buyParts * 100) + (buyFuel * 10) + (buyAmmo * 50);
+  //   while (total > ship.money || ship.foodcap < ship.food + buyFood || ship.fuelCap < ship.fuel + buyFuel || buyFood === undefined || buyParts === undefined) {
+  //       ("Get serious");
+  //       buyFood = parseInt(prompt("How much food $10/ea"));
+  //       buyParts = parseInt(prompt("How much Parts $100/ea"));
+  //       buyFuel = parseInt(prompt("How much fuel $10/ea"));
+  //       buyAmmo = parseInt(prompt("How much Ammo $50/ea"));
+  //       total = (buyFood * 50) + (buyParts * 100) + (buyFuel * 10) + (buyAmmo * 50);
+  //     }
+  //   let repaircost = 1000 - ship.hp;
+  //   let repairReply = prompt("Repairing will take" + repaircost / 100 + " ship parts, proceed?? y/n");
+  //   if (repairReply === "y") {
+  //     ship.hp = 1000;
+  //     ship.parts -= repaircost / 100;
+  //   }
+  //   let healReply = prompt("Heal crew for $1000? y/n");
+  //   if (healReply === "y") {
+  //     for (let i = 0; i < ship.crew.length; i++) {
+  //       ship.crew[i].health = 300;
+  //     }
+  //   }
+  //   let shieldReply = prompt("Fully recharge Shield for $10,000? y/n");
+  //   if (shieldReply === "y") {
+  //     ship.shield = 1000;
+  //   }
+  //   ship.fuel += buyFuel;
+  //   ship.parts += buyParts;
+  //   ship.food += buyFood;
+  //   ship.ammo += buyAmmo;
+  //   ship.money -= total;
+  //   return ship;
+  // }
 
 
   ghostStation(ship, ynChoice) {

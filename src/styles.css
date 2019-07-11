@@ -7,6 +7,7 @@ body {
 
 img {
   border-radius: 4px;
+
 }
 
 #home {
@@ -30,7 +31,7 @@ img {
 text-shadow: 0 0 5px #2256F4, 0 0 5px #00ECFF, 1px 2px 2px #00A6FF;
 }
 
-#envoy, #spaceStation, a {
+#envoy {
   text-align: center;
   background: rgba(0, 0, 9, 0.8);
   border-radius: 4px;
@@ -60,6 +61,7 @@ border-color: transparent;
   font-family: 'Orbitron', sans-serif;
   border-color: transparent;
   background: rgba(0, 0, 9, 0.8);
+  text-shadow: 0 0 5px #00ECFF, 0 0 5px #2256F4;
 }
 
 #actionBar {
@@ -72,14 +74,27 @@ border-color: transparent;
   background: rgba(0, 0, 9, 0.8);
 }
 
-#colonize {
+#spaceStation {
+  text-align: center;
+  background: rgba(0, 0, 9, 0.8);
+  border-radius: 4px;
+  color: #00ECFF;
+  font-family: 'Orbitron', sans-serif;
+  border-color: transparent;
+}
+#stationDesign {
+  background-color: transparent;
+
+}
+
+/* #colonize {
   text-align: center;
   background: rgba(0, 0, 9, 0.8);
   border-radius: 4px;
   color: #2256F4;
   font-family: 'Orbitron', sans-serif;
   border-color: transparent;
-}
+} */
 
 #resultScreen {
   text-align: center;
@@ -99,7 +114,47 @@ border-color: transparent;
   transform: translateY(4px);
 }
 
-#start {
+.button {
+  background-color: #2256F4;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  border: none;
+  color: #FFFFFF;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 16px 32px;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  -webkit-animation: glowing 1000ms infinite;
+  -moz-animation: glowing 1000ms infinite;
+  -o-animation: glowing 1000ms infinite;
+  animation: glowing 1000ms infinite;
+}
+@-webkit-keyframes glowing {
+  0% { background-color: #2256F4; -webkit-box-shadow: 0 0 3px #2256F4; }
+  50% { background-color: #00ECFF; -webkit-box-shadow: 0 0 40px #00ECFF; }
+  100% { background-color: #2256F4; -webkit-box-shadow: 0 0 3px #2256F4; }
+}
+
+@-moz-keyframes glowing {
+  0% { background-color: #2256F4; -moz-box-shadow: 0 0 3px #2256F4; }
+  50% { background-color: #00ECFF; -moz-box-shadow: 0 0 40px #00ECFF; }
+  100% { background-color: #2256F4; -moz-box-shadow: 0 0 3px #2256F4; }
+}
+
+@-o-keyframes glowing {
+  0% { background-color: #2256F4; box-shadow: 0 0 3px #2256F4; }
+  50% { background-color: #00ECFF; box-shadow: 0 0 40px #00ECFF; }
+  100% { background-color: #2256F4; box-shadow: 0 0 3px #2256F4; }
+}
+
+@keyframes glowing {
+  0% { background-color: #2256F4; box-shadow: 0 0 3px #2256F4; }
+  50% { background-color: #00ECFF; box-shadow: 0 0 40px #00ECFF; }
+  100% { background-color: #2256F4; box-shadow: 0 0 3px #2256F4; }
+}
+/* #start {
   border-color: transparent;
   border: none;
   color: black;
@@ -108,28 +163,25 @@ border-color: transparent;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  margin: 4px 2px;
-  -webkit-transition-duration: 0.4s; /* Safari */
-  transition-duration: 0.4s;
+  margin: 4px 2px; */
+
+  /* transition-duration: 0.4s;
   cursor: pointer;
   box-shadow: 0 0 5px #00ECFF, 0 0 5px #2256F4;
   text-shadow: 0 0 5px #00ECFF, 0 0 5px #2256F4;
-}
-
-
-#start {
+} */
+/* #start {
   background-color: transparent;
   color: #00ECFF;
   border: 2px solid #00ECFF, 0 0 5px #2256F4;
   border-radius: 12px;
-}
-
-#start:hover {
+} */
+.button:hover {
   background-color: #00ECFF;
   color: black;
 }
 
-#game1, #game2, a {
+#game1, #game2, #purchase, a {
   background-color: transparent;
   border: none;
   color: black;
@@ -146,28 +198,31 @@ border-color: transparent;
   text-shadow: 0 0 5px #00ECFF, 0 0 5px #2256F4;
 }
 
-#game1, #game2, a {
+#game1, #game2, #purchase, a {
   background-color: transparent;
   color: #00ECFF;
   border: 2px solid #00ECFF, 0 0 5px #2256F4;
   border-radius: 12px;
 }
-#game1:hover, #game2:hover, a {
+#game1:hover, #game2:hover, #purchase:hover, a {
   background-color: #00ECFF;
   color: black;
 }
 
 #crew1, #crew2, #crew3, #crew4, #crew5,
 #crew6, #crew7, #crew8, #crew9, #crew10,
-a {
+#item1, #item2, #item3, #item4, #item5,
+#item6, #item7, a {
   background-color: transparent;
   color: #00ECFF;
-  border: 2px solid #00ECFF, 0 0 5px #2256F4;
+  /* border: 2px solid #00ECFF, 0 0 5px #2256F4; */
   border-radius: 12px;
   border-color: transparent;
+  text-shadow: 0 0 5px #00ECFF, 0 0 5px #2256F4;
+
 }
 
-#gameMenu, #gameMenu2, #exit, #restart,  a {
+#gameMenu, #gameMenu2, #exit, #goHome, #goHome2, a {
   background-color: transparent;
   border: none;
   color: black;
@@ -176,25 +231,23 @@ a {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  margin: 4px 2px;
+  /* margin: 4px 2px; */
   -webkit-transition-duration: 0.4s; /* Safari */
   transition-duration: 0.4s;
   cursor: pointer;
   box-shadow: 0 0 5px #00ECFF, 0 0 5px #2256F4;
   text-shadow: 0 0 5px #00ECFF, 0 0 5px #2256F4;
 }
-
-#gameMenu, #gameMenu2, #exit, #restart, a {
+#gameMenu, #gameMenu2, #exit, #goHome, #goHome2, a {
   background-color: transparent;
   color: #00ECFF;
   border: 2px solid #00ECFF, 0 0 5px #2256F4;
   border-radius: 12px;
 }
-#gameMenu:hover, #gameMenu2:hover, #exit:hover, #restart:hover, a {
+#gameMenu:hover, #gameMenu2:hover, #exit:hover, #goHome:hover,#goHome2:hover, a {
   background-color: #00ECFF;
   color: black;
 }
-
 .footer {
   text-align: center;
   font-family: 'Orbitron', sans-serif;
@@ -205,15 +258,16 @@ a {
   left: 0;
   bottom: 0;
   width: 100%;
+  text-shadow: 0 0 5px #00ECFF, 0 0 5px #2256F4;
 }
   progress#health {
   	display:inline-block;
-  	width:150px;
+  	width:100px;
   	height:20px;
   	margin:0;
   	background: transparent;
   	border: 0;
-  	border-radius: 2px;
+  	border-radius: 12px;
   	text-align: center;
   	position:relative;
   	font-family: Arial, Helvetica, sans-serif;
@@ -221,10 +275,10 @@ a {
   }
   progress#health::-webkit-progress-bar {
   	height:11px;
-  	width:150px;
+  	width:100px;
   	margin:0 auto;
   	background-color: transparent;
-  	border-radius: 15px;
+  	border-radius: 12px;
   	box-shadow:0px 0px 6px #777 inset;
   }
   progress#health::-webkit-progress-value {
@@ -240,17 +294,16 @@ a {
   	padding:0;
   	display:inline-block;
   	float:left;
-  	/* content: attr(value) '%'; */
   }
 
   progress#fuel {
   	display:inline-block;
-  	width:150px;
+  	width:100px;
   	height:20px;
   	margin:0;
   	background:none;
   	border: 0;
-  	border-radius: 2px;
+  	border-radius: 12px;
   	text-align: center;
   	position:relative;
   	font-family: Arial, Helvetica, sans-serif;
@@ -258,10 +311,10 @@ a {
   }
   progress#fuel::-webkit-progress-bar {
   	height:11px;
-  	width:150px;
+  	width:100px;
   	margin:0 auto;
   	background-color: transparent;
-  	border-radius: 15px;
+  	border-radius: 12px;
   	box-shadow:0px 0px 6px #777 inset;
   }
   progress#fuel::-webkit-progress-value {
@@ -277,11 +330,10 @@ a {
   	padding:0;
   	display:inline-block;
   	float:left;
-  	/* content: attr(value) '%'; */
   }
   progress#food {
     display:inline-block;
-    width:150px;
+    width:100px;
     height:20px;
     margin:0;
     background:none;
@@ -294,7 +346,7 @@ a {
   }
   progress#food::-webkit-progress-bar {
     height:11px;
-    width:150px;
+    width:100px;
     margin:0 auto;
     background-color: transparent;
     border-radius: 15px;
@@ -313,17 +365,16 @@ a {
     padding:0;
     display:inline-block;
     float:left;
-    /* content: attr(value) '%'; */
   }
 
   progress#shield {
   	display:inline-block;
-  	width:150px;
+  	width:100px;
   	height:20px;
   	margin:0;
   	background:none;
   	border: 0;
-  	border-radius: 2px;
+  	border-radius: 12px;
   	text-align: center;
   	position:relative;
   	font-family: Arial, Helvetica, sans-serif;
@@ -331,7 +382,7 @@ a {
   }
   progress#shield::-webkit-progress-bar {
   	height:11px;
-  	width:150px;
+  	width:100px;
   	margin:0 auto;
   	background-color: transparent;
   	border-radius: 15px;
@@ -354,12 +405,12 @@ a {
   }
   progress#shipHp {
     display:inline-block;
-    width:150px;
+    width:100px;
     height:20px;
     margin:0;
     background:none;
     border: 0;
-    border-radius: 2px;
+    border-radius: 12px;
     text-align: center;
     position:relative;
     font-family: Arial, Helvetica, sans-serif;
@@ -367,7 +418,7 @@ a {
   }
   progress#shipHp::-webkit-progress-bar {
     height:11px;
-    width:150px;
+    width:100px;
     margin:0 auto;
     background-color: transparent;
     border-radius: 15px;
@@ -390,7 +441,7 @@ a {
   }
   progress#distanceTraveled {
     display:inline-block;
-    width:150px;
+    width:100px;
     height:20px;
     margin:0;
     background:none;
@@ -403,7 +454,7 @@ a {
   }
   progress#distanceTraveled::-webkit-progress-bar {
     height:11px;
-    width:150px;
+    width:100px;
     margin:0 auto;
     background-color: transparent;
     border-radius: 15px;
@@ -435,51 +486,65 @@ a {
   #item1, #item2, #item3, #item4, #item5, #item6, #item7 {
     height: 200px;
     width: 200px;
-    background-color: black;
+    background: rgba(0, 0, 9, 0.8);
 
   }
-  #stationDesign {
-    background-color: transparent;
-  }
-  #purchase {
-    border-color: transparent;
-    border: none;
-    color: black;
+
+  #row1, #row2, #row3, #row4, #row5, #row10, a {
+    margin-left: 25px;
     text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    -webkit-transition-duration: 0.4s; /* Safari */
-    transition-duration: 0.4s;
-    cursor: pointer;
-    box-shadow: 0 0 5px #00ECFF, 0 0 5px #2256F4;
-    text-shadow: 0 0 5px #00ECFF, 0 0 5px #2256F4;
+    justify-content: center;
+    display: flex;
+    /* margin: 0 auto; */
   }
-  #row1, #row2, #row3, a {
-    margin-left: 100px;
+
+  #money {
+    color: gold;
   }
-  /* #shipType, #statCard, a {
-    background: black;
+
+  #prompts {
+    text-align: center;
+    background-color: transparent;
+    border-radius: 4px;
     color: #00ECFF;
     font-family: 'Orbitron', sans-serif;
-    border-color: transparent;
-  } */
-  /* #shipHp{
-    float: left;
+    margin: 0 auto;
+    justify-content: center;
+    text-shadow: 0 0 5px #00ECFF, 0 0 5px #2256F4;
+    /* display: flex; */
   }
-  #shipFuel{
-    float: left;
+  #promptStation, #promptEvent, a {
+    background-color: transparent;
+    /* margin: 0 auto;
+    text-align: center;
+    justify-content: center;
+    display: flex; */
   }
-  #Money{
-    float: left;
-  }
-  #shipParts{
-    float: left;
-  }
-  #shipOre{
-    float: left;
-  }
-  #shipWeapons{
-    float: left;
-  } */
+
+  #keepFlying, #dock, #eventYes, #eventNo, a {
+      background-color: transparent;
+      border: none;
+      color: black;
+      padding: 16px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      -webkit-transition-duration: 0.4s; /* Safari */
+      transition-duration: 0.4s;
+      cursor: pointer;
+      box-shadow: 0 0 5px #00ECFF, 0 0 5px #2256F4;
+      text-shadow: 0 0 5px #00ECFF, 0 0 5px #2256F4;
+    }
+
+    #keepFlying, #dock, #eventYes, #eventNo, a {
+      background-color: transparent;
+      color: #00ECFF;
+      border: 2px solid #00ECFF, 0 0 5px #2256F4;
+      border-radius: 12px;
+    }
+    #keepFlying:hover, #dock:hover, #eventYes:hover, #eventNo:hover, a {
+      background-color: #00ECFF;
+      color: black;
+    }
