@@ -83,6 +83,8 @@ $(document).ready(function() {
       winCheck();
     }
     function showSpaceShop(){
+      pause = 2;
+      startStop();
       missionEnvoy.money += missionEnvoy.materials * 50;
       missionEnvoy.materials = 0;
       $("#spaceStation").show();
@@ -365,7 +367,7 @@ let ynChoice = 0;
   $("#spaceStation").hide();
   $("#prompts").hide();
   $("#envoy").show();
-  pause = 2;
+  pause = 1;
   startStop();
 });
 
