@@ -18,7 +18,6 @@ export class Ship {
   }
 }
 
-
 export class Crew {
     constructor(gender,age,occupation) {
       this.gender = gender;
